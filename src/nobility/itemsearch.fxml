@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="500.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nobility.ItemSearchController">
+    <TableView fx:id="main_table" prefHeight="461.0" stylesheets="@settings.css">
+      <columns>
+          <TableColumn fx:id="main_column1" editable="false" maxWidth="71.0" prefWidth="60.0" resizable="false" text="Item ID" />
+          <TableColumn fx:id="main_column2" editable="false" maxWidth="254.0" prefWidth="180.0" resizable="false" text="Item Name" />
+          <TableColumn fx:id="main_column3" editable="false" maxWidth="89.33331298828125" prefWidth="40.0" resizable="false" text="On" />
+          <TableColumn fx:id="main_column4" editable="false" maxWidth="103.0" resizable="false" sortable="false" text="Amount" />
+      </columns>
+        <columnResizePolicy>
+          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+        </columnResizePolicy>
+    </TableView>
+    <TextField fx:id="search_field" prefHeight="39.0" prefWidth="310.0" promptText="Search By ID Or Name" stylesheets="@settings.css" />
+</VBox>

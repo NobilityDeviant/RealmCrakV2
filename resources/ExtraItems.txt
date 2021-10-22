@@ -1,0 +1,54 @@
+ID: 9015 Name: Almandine Armor of Anger
+ID: 9016 Name: Almandine Ring of Wrath
+ID: 9017 Name: Onyx Shield of the Mad God
+ID: 8962 Name: Sword of the Mad God
+ID: 9052 Name: Shendyt of Geb
+ID: 9053 Name: Geb's Ring of Wisdom
+ID: 9054 Name: Book of Geb
+ID: 9055 Name: Scepter of Geb
+ID: 9056 Name: Soulless Robe
+ID: 9057 Name: Ring of the Covetous Heart
+ID: 9058 Name: Soul of the Bearer
+ID: 9059 Name: The Phylactery
+ID: 9060 Name: Fairy Plate
+ID: 9061 Name: Ring of Pure Wishes
+ID: 9062 Name: Seal of the Enchanted Forest
+ID: 9063 Name: Pixie-Enchanted Sword
+ID: 8608 Name: Etherite Dagger
+ID: 8609 Name: Mantle of Skuld
+ID: 8610 Name: Ghastly Drape
+ID: 8611 Name: Spectral Ring of Horrors
+ID: 8615 Name: Sentient Staff
+ID: 8616 Name: The Robe of Twilight
+ID: 8618 Name: The Forgotten Ring
+ID: 32697 Name: Zaarvox's Heart
+ID: 32698 Name: Amulet of Drakefyre
+ID: 32699 Name: Helm of Draconic Dominance
+ID: 32700 Name: Indomptable
+ID: 2524 Name: NecroST0
+ID: 2525 Name: NecroST1
+ID: 2526 Name: NecroST2
+ID: 2527 Name: NecroST3
+ID: 2295 Name: EH Nectar Crossfire
+ID: 2296 Name: EH Honeytomb Snare
+ID: 2297 Name: EH Apiary Armor
+ID: 2298 Name: EH Honey Circlet
+ID: 600 Name: Carved Golem Remains
+ID: 601 Name: Brain of the Golem
+ID: 602 Name: Golem Garments
+ID: 603 Name: Rusty Cuffs
+ID: 25604 Name: Cupid's Garments
+ID: 25605 Name: Ring of Unbound Love
+ID: 25606 Name: Heartstruck Bow
+ID: 25607 Name: Quiver of Dazing Love
+ID: 5034 Name: Eternal Graved Great Sword
+ID: 5035 Name: Spriteful Shield
+ID: 5036 Name: Eggre Battle Armor
+ID: 5037 Name: Tiara of Eggscellent Sturdiness
+ID: 3004 Name: Abomination's Wrath
+ID: 3005 Name: Grotesque Scepter
+ID: 3006 Name: Garment of the Beast
+ID: 3007 Name: Horrific Claws
+ID: 5407 Name: Valentine
+ID: 9055 Name: Wand of Geb
+ID: 8617 Name: Pierce
