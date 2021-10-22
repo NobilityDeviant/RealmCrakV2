@@ -1,7 +1,7 @@
 # RealmCrakV2
 RealmoftheMadGod's worst enemy.
 
-RealmCrak is an account checker for RealmOfTheMadGod.
+RealmCrak is an account checker for RealmOfTheMadGod. (ROTMG)
 It is now FREE for anyone to use however they like.
 
 Coded in Java 8. You need java 8 to use it: https://www.java.com/en/download/manual.jsp
