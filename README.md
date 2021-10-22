@@ -12,6 +12,8 @@ I use IntelliJ as an IDE: https://www.jetbrains.com/idea/download/ - The Communi
 
 You can download it here: https://github.com/NobilityDeviant/RealmCrakV2/releases/tag/1.2.0.3
 
+Or you can compile the jar yourself.
+
 If you are new to these type of programs, you can contact me about any questions.
 
 My Discord: Nobility#9814
