@@ -12,7 +12,7 @@ JDK 8 is needed to edit it: https://www.openlogic.com/openjdk-downloads?field_ja
 
 I use IntelliJ as an IDE: https://www.jetbrains.com/idea/download/ - The Community Version will work just fine.
 
-You can download it here: hhttps://github.com/NobilityDeviant/RealmCrakV2/releases
+You can download it here: https://github.com/NobilityDeviant/RealmCrakV2/releases
 
 Or you can compile the jar yourself.
 
