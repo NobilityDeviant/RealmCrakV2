@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Realmcrak:jar" />
+      <artifact name="RealmCrak_V2:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9455040-1ebf-402b-aa41-7aed8e495357" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Realmcrak_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="f9455040-1ebf-402b-aa41-7aed8e495357" name="Default Changelist" comment="Oops! Removed a little boolean i used to prevent running the checker if not logged in.">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Realmcrak_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/RealmCrak_V2_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/moduleshandler/ModuleHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/moduleshandler/ModuleHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +59,14 @@
       <option name="presentableId" value="Default" />
       <updated>1634865792589</updated>
     </task>
+    <task id="LOCAL-00001" summary="Edited a couple files, fixed jna and oshi">
+      <created>1634867657408</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1634867657408</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -70,5 +79,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Edited a couple files, fixed jna and oshi" />
+    <MESSAGE value="Oops! Removed a little boolean i used to prevent running the checker if not logged in." />
+    <option name="LAST_COMMIT_MESSAGE" value="Oops! Removed a little boolean i used to prevent running the checker if not logged in." />
   </component>
 </project>

@@ -471,10 +471,6 @@ public class Model {
         this.loggedIn = loggedIn;
     }
 
-    public boolean isLoggedIn() {
-        return !loggedIn;
-    }
-
     public void shutdown() {
         if (moduleHandler.settings().isRunning() || moduleHandler.settings().isStopping()) {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION,

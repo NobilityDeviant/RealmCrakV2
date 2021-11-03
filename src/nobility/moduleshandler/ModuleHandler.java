@@ -147,9 +147,6 @@ public class ModuleHandler {
                 resultNames = new File(currentSaveFolder.getAbsolutePath() + "/" + "names.txt");
             }
             model.getFxModel().setStartButtons();
-            if (model.isLoggedIn()) {
-                return;
-            }
             settings.setRunning(true);
             //if (moduleCycle == null) {
             cycle.start();
@@ -201,7 +198,7 @@ public class ModuleHandler {
                 saveCheckedHits();
                 saveHits();
                 if (currentSaveFolder.listFiles() == null
-                        || Objects.requireNonNull(currentSaveFolder.listFiles()).length == 0) {
+                        || currentSaveFolder.listFiles().length == 0) {
                     currentSaveFolder.delete();
                 }
                 model.collects().setComboProgress(settings.getProgress()); //TODO remove?
