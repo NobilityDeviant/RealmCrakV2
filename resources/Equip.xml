@@ -1703,7 +1703,7 @@
       <ActivateOnEquip stat="21" amount="28">IncrementStat</ActivateOnEquip>
       <BagType>9</BagType>
       <FameBonus>6</FameBonus>
-      <feedPower>650</feedPower>
+      <feedPower>950</feedPower>
       <Soulbound/>
    </Object>
    <Object type="0xa14" id="Steel Dagger">
@@ -3394,6 +3394,7 @@
       <Activate range="10" amount="100">HealNova</Activate>
       <feedPower>35</feedPower>
       <DropTradable/>
+      <Track/>
    </Object>
    <Object type="0x707" id="Healing Ichor">
       <Class>Equipment</Class>
@@ -3451,36 +3452,38 @@
       <Item/>
       <Texture>
          <File>lofiObj2</File>
-         <Index>0xc7</Index>
+         <Index>0xa6</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Adds speed and reduces attack.</Description>
+      <Description>A potion that temporarily boosts speed and reduces attack, enabling the fearful to retreat.</Description>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <Potion/>
       <BagType>2</BagType>
-      <Activate stat="22" amount="15" duration="45">StatBoostSelf</Activate>
-      <Activate stat="20" amount="-15" duration="60">StatBoostSelf</Activate>
+      <Activate amount="20" duration="30" stat="22">StatBoostSelf</Activate>
+      <Activate amount="-10" duration="30" stat="20">StatBoostSelf</Activate>
       <feedPower>10</feedPower>
+      <DropTradable/>
+      <Track/>
    </Object>
    <Object type="0x77c" id="Tincture of Courage">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>lofiObj2</File>
-         <Index>0xc7</Index>
+         <Index>0xa7</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Adds attack to everyone reduces speed for self.</Description>
+      <Description>A potion that temporarily boosts attack and reduces speed, enabling the courageous to stand their ground.</Description>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <Potion/>
       <BagType>2</BagType>
-      <Activate stat="22" amount="-10" duration="30">StatBoostSelf</Activate>
-      <Activate stat="20" amount="15" duration="30">StatBoostSelf</Activate>
+      <Activate amount="20" duration="30" stat="20">StatBoostSelf</Activate>
+      <Activate amount="-10" duration="30" stat="22">StatBoostSelf</Activate>
       <feedPower>10</feedPower>
+      <DropTradable/>
+      <Track/>
    </Object>
    <Object type="0xb0c" id="Tincture of Dexterity">
       <Class>Equipment</Class>
@@ -3498,6 +3501,7 @@
       <Activate stat="28" amount="15" duration="30">StatBoostSelf</Activate>
       <feedPower>10</feedPower>
       <DropTradable/>
+      <Track/>
    </Object>
    <Object type="0xb0d" id="Tincture of Life">
       <Class>Equipment</Class>
@@ -3515,6 +3519,7 @@
       <Activate stat="0" amount="75" duration="30">StatBoostSelf</Activate>
       <feedPower>10</feedPower>
       <DropTradable/>
+      <Track/>
    </Object>
    <Object type="0xb0e" id="Tincture of Mana">
       <Class>Equipment</Class>
@@ -3532,6 +3537,7 @@
       <Activate stat="3" amount="75" duration="30">StatBoostSelf</Activate>
       <feedPower>10</feedPower>
       <DropTradable/>
+      <Track/>
    </Object>
    <Object type="0xb0f" id="Tincture of Defense">
       <Class>Equipment</Class>
@@ -3549,6 +3555,7 @@
       <Activate stat="21" amount="15" duration="30">StatBoostSelf</Activate>
       <feedPower>15</feedPower>
       <DropTradable/>
+      <Track/>
    </Object>
    <Object type="0xd68" id="Tincture of Attack">
       <Class>Equipment</Class>
@@ -3566,6 +3573,7 @@
       <Activate stat="20" amount="15" duration="30">StatBoostSelf</Activate>
       <feedPower>15</feedPower>
       <DropTradable/>
+      <Track/>
    </Object>
    <Object type="0xd69" id="Tincture of Speed">
       <Class>Equipment</Class>
@@ -3583,6 +3591,7 @@
       <Activate stat="22" amount="15" duration="30">StatBoostSelf</Activate>
       <feedPower>15</feedPower>
       <DropTradable/>
+      <Track/>
    </Object>
    <Object type="0xd6a" id="Tincture of Vitality">
       <Class>Equipment</Class>
@@ -3600,6 +3609,7 @@
       <Activate stat="26" amount="15" duration="30">StatBoostSelf</Activate>
       <feedPower>15</feedPower>
       <DropTradable/>
+      <Track/>
    </Object>
    <Object type="0xd6b" id="Tincture of Wisdom">
       <Class>Equipment</Class>
@@ -3617,6 +3627,7 @@
       <Activate stat="27" amount="15" duration="30">StatBoostSelf</Activate>
       <feedPower>15</feedPower>
       <DropTradable/>
+      <Track/>
    </Object>
    <Object type="0xb10" id="Effusion of Dexterity">
       <Class>Equipment</Class>
@@ -3634,6 +3645,7 @@
       <Activate stat="28" amount="30" duration="30" range="6">StatBoostAura</Activate>
       <feedPower>20</feedPower>
       <DropTradable/>
+      <Track/>
    </Object>
    <Object type="0xb11" id="Effusion of Life">
       <Class>Equipment</Class>
@@ -3651,6 +3663,7 @@
       <Activate stat="0" amount="150" duration="30" range="6">StatBoostAura</Activate>
       <feedPower>15</feedPower>
       <DropTradable/>
+      <Track/>
    </Object>
    <Object type="0xb12" id="Effusion of Mana">
       <Class>Equipment</Class>
@@ -3668,6 +3681,7 @@
       <Activate stat="3" amount="150" duration="30" range="6">StatBoostAura</Activate>
       <feedPower>15</feedPower>
       <DropTradable/>
+      <Track/>
    </Object>
    <Object type="0xb13" id="Effusion of Defense">
       <Class>Equipment</Class>
@@ -3685,6 +3699,7 @@
       <Activate stat="21" amount="30" duration="30" range="6">StatBoostAura</Activate>
       <feedPower>20</feedPower>
       <DropTradable/>
+      <Track/>
    </Object>
    <Object type="0xd6c" id="Effusion of Attack">
       <Class>Equipment</Class>
@@ -3702,6 +3717,7 @@
       <Activate stat="20" amount="30" duration="30" range="6">StatBoostAura</Activate>
       <feedPower>20</feedPower>
       <DropTradable/>
+      <Track/>
    </Object>
    <Object type="0xd6d" id="Effusion of Speed">
       <Class>Equipment</Class>
@@ -3719,6 +3735,7 @@
       <Activate stat="22" amount="30" duration="30" range="6" onlyIn="realm">StatBoostAura</Activate>
       <feedPower>20</feedPower>
       <DropTradable/>
+      <Track/>
    </Object>
    <Object type="0xd6e" id="Effusion of Vitality">
       <Class>Equipment</Class>
@@ -3736,6 +3753,7 @@
       <Activate stat="26" amount="30" duration="30" range="6">StatBoostAura</Activate>
       <feedPower>20</feedPower>
       <DropTradable/>
+      <Track/>
    </Object>
    <Object type="0xd6f" id="Effusion of Wisdom">
       <Class>Equipment</Class>
@@ -3753,6 +3771,7 @@
       <Activate stat="27" amount="30" duration="30" range="6">StatBoostAura</Activate>
       <feedPower>20</feedPower>
       <DropTradable/>
+      <Track/>
    </Object>
    <Object type="0xa41" id="Snake Eye Ring">
       <Class>Equipment</Class>
@@ -5937,7 +5956,7 @@
          <Index>0x6f</Index>
       </Texture>
       <SlotType>15</SlotType>
-      <Description>This strange quiver that was created in a forgotten age by a lost tribe of Dark Elves.</Description>
+      <Description>This strange quiver was created in a forgotten age by a lost tribe of Dark Elves.</Description>
       <Sound>spell/fire_spray</Sound>
       <Projectile>
          <ObjectId>White Bolt</ObjectId>
@@ -7589,7 +7608,7 @@
       <Sound>use_key</Sound>
       <Consumable/>
       <BagType>4</BagType>
-      <Activate onlyInArea="Oryx's Chamber,Chicken Chamber" dungeonName="Wine Cellar" lockedName="Locked Wine Cellar Portal">UnlockPortal</Activate>
+      <Activate color="-1" newId="Wine Cellar Portal" onlyInArea="Oryx's Chamber,Chicken Chamber" radius="25" targetId="Locked Wine Cellar Portal" customString="Wine Cellar unlocked by">ChangeObject</Activate>
       <feedPower>500</feedPower>
       <Track/>
    </Object>
@@ -7782,7 +7801,7 @@
       <BagType>6</BagType>
       <FameBonus>5</FameBonus>
       <MpCost>100</MpCost>
-      <Activate radius="4" totalDamage="350" condEffect="Paralyzed" condDuration="3.5">Trap</Activate>
+      <Activate radius="4" totalDamage="350" condEffect="Paralyzed" condDuration="3.5" color="0xFF4A8C">Trap</Activate>
       <feedPower>800</feedPower>
       <Soulbound/>
    </Object>
@@ -8499,6 +8518,7 @@
       <Timer>-1.0</Timer>
       <XpBoost/>
       <feedPower>200</feedPower>
+      <Track/>
    </Object>
    <Object type="0xc43" id="XP Booster Test">
       <Class>Equipment</Class>
@@ -8517,6 +8537,7 @@
       <Timer>300</Timer>
       <XpBoost/>
       <feedPower>1</feedPower>
+      <Track/>
    </Object>
    <Object type="0xc44" id="Rusty Katana">
       <Class>Equipment</Class>
@@ -8880,7 +8901,7 @@
       </Texture>
       <SlotType>24</SlotType>
       <Tier>14</Tier>
-      <Description>An awe-inspiring sword gifted to only the most worthy mortals from the heavens themselves.</Description>
+      <Description>An awe-inspiring sword gifted to only the most worthy mortals from the highest heavens, channeling gales of wind in the hands of the blameless.</Description>
       <RateOfFire>1</RateOfFire>
       <Sound>weapon/long_sword</Sound>
       <Projectile>
@@ -9770,6 +9791,7 @@
       <Timer>3600</Timer>
       <XpBoost/>
       <feedPower>110</feedPower>
+      <Track/>
    </Object>
    <Object type="0xc6b" id="XP Booster 20 min">
       <Class>Equipment</Class>
@@ -9790,6 +9812,7 @@
       <Timer>1200</Timer>
       <XpBoost/>
       <feedPower>75</feedPower>
+      <Track/>
    </Object>
    <Object type="0x9d2" id="Strike Amulet">
       <Class>Equipment</Class>
@@ -9845,6 +9868,7 @@
       <BagType>2</BagType>
       <OldSound>use_potion</OldSound>
       <feedPower>200</feedPower>
+      <Track/>
    </Object>
    <Object type="0xc6e" id="Resurrected Warrior's Armor">
       <Class>Equipment</Class>
@@ -12632,7 +12656,7 @@
       <Soulbound/>
    </Object>
    <Object type="0x21f4" id="WizardST1" setType="0x0006" setName="Twilight Archmage Set">
-      <DisplayId>Ancient Spell: Pierce</DisplayId>
+      <DisplayId>Ancient Spell</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -12904,7 +12928,7 @@
          <MultiHit/>
       </Projectile>
       <ArcGap>8</ArcGap>
-      <BagType>2</BagType>
+      <BagType>4</BagType>
       <FameBonus>3</FameBonus>
       <NumProjectiles>3</NumProjectiles>
       <OldSound>arrowShoot</OldSound>
@@ -12928,7 +12952,7 @@
          <MaxDamage>270</MaxDamage>
          <LifetimeMS>350</LifetimeMS>
       </Projectile>
-      <BagType>2</BagType>
+      <BagType>4</BagType>
       <FameBonus>3</FameBonus>
       <OldSound>bladeSwing</OldSound>
       <feedPower>310</feedPower>
@@ -14720,7 +14744,7 @@
       <SlotType>20</SlotType>
       <Description>A strange trap that subdues would-be pilferers with a torrent of sticky honey.</Description>
       <ExtraTooltipData>
-         <EffectInfo name="Trap" description="150 damage within 6 squares"/>
+         <EffectInfo name="Trap" description="125 damage within 6.5 squares"/>
          <EffectInfo name="" description="Inflicts Slowed for 1.2 seconds"/>
          <EffectInfo name="" description="1 second to arm for 6 seconds"/>
          <EffectInfo name="" description="Triggers every 1 second"/>
@@ -14785,6 +14809,7 @@
       <Consumable/>
       <Soulbound/>
       <BagType>2</BagType>
+      <Track/>
    </Object>
    <Object type="0x13e" id="Clothing Dye Remover">
       <Class>Dye</Class>
@@ -14802,6 +14827,7 @@
       <Consumable/>
       <Soulbound/>
       <BagType>2</BagType>
+      <Track/>
    </Object>
    <Object type="0x998" id="Magical Accessory Dye Remover">
       <Class>Dye</Class>
@@ -16936,6 +16962,7 @@
       <BagType>2</BagType>
       <OldSound>use_potion</OldSound>
       <feedPower>200</feedPower>
+      <Track/>
    </Object>
    <Object type="0x1aca" id="Icicle Launcher">
       <Class>Equipment</Class>
@@ -17957,7 +17984,7 @@
       <Activate skinType="32768">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe7a" id="Grey Cat Skin Unlocker">
@@ -17972,7 +17999,7 @@
       <Activate skinType="32769">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe7b" id="Orange Cat Skin Unlocker">
@@ -17987,7 +18014,7 @@
       <Activate skinType="32770">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe7c" id="Tan Cat Skin Unlocker">
@@ -18002,7 +18029,7 @@
       <Activate skinType="32771">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe7d" id="Yellow Cat Skin Unlocker">
@@ -18017,7 +18044,7 @@
       <Activate skinType="32772">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe7e" id="White Cat Skin Unlocker">
@@ -18032,7 +18059,7 @@
       <Activate skinType="32773">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe7f" id="Brown Pup Skin Unlocker">
@@ -18047,7 +18074,7 @@
       <Activate skinType="32774">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe80" id="Grey Pup Skin Unlocker">
@@ -18062,7 +18089,7 @@
       <Activate skinType="32775">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe81" id="Golden Pup Skin Unlocker">
@@ -18077,7 +18104,7 @@
       <Activate skinType="32776">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe82" id="Grey Wolf Skin Unlocker">
@@ -18092,7 +18119,7 @@
       <Activate skinType="32777">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe83" id="Brown Fox Skin Unlocker">
@@ -18107,7 +18134,7 @@
       <Activate skinType="32778">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe84" id="Sheepdog Skin Unlocker">
@@ -18122,7 +18149,7 @@
       <Activate skinType="32779">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe85" id="Grey Fox Skin Unlocker">
@@ -18137,7 +18164,7 @@
       <Activate skinType="32780">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe86" id="Blue Parrot Skin Unlocker">
@@ -18152,7 +18179,7 @@
       <Activate skinType="32781">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe87" id="Oriole Skin Unlocker">
@@ -18167,7 +18194,7 @@
       <Activate skinType="32782">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe88" id="Goldfinch Skin Unlocker">
@@ -18182,7 +18209,7 @@
       <Activate skinType="32783">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe89" id="Bluebird Skin Unlocker">
@@ -18197,7 +18224,7 @@
       <Activate skinType="32784">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe8a" id="Cardinal Skin Unlocker">
@@ -18212,7 +18239,7 @@
       <Activate skinType="32785">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe8b" id="Elephant Skin Unlocker">
@@ -18227,7 +18254,7 @@
       <Activate skinType="32786">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe8c" id="Koala Skin Unlocker">
@@ -18242,7 +18269,7 @@
       <Activate skinType="32787">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe8d" id="Monkey Skin Unlocker">
@@ -18257,7 +18284,7 @@
       <Activate skinType="32788">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe8e" id="Chick Skin Unlocker">
@@ -18272,7 +18299,7 @@
       <Activate skinType="32789">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe8f" id="Pig Skin Unlocker">
@@ -18287,7 +18314,7 @@
       <Activate skinType="32790">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe90" id="Duck Skin Unlocker">
@@ -18302,7 +18329,7 @@
       <Activate skinType="32791">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe91" id="Squirrel Skin Unlocker">
@@ -18317,7 +18344,7 @@
       <Activate skinType="32792">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe92" id="Hamster Skin Unlocker">
@@ -18332,7 +18359,7 @@
       <Activate skinType="32793">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe93" id="Raccoon Skin Unlocker">
@@ -18347,7 +18374,7 @@
       <Activate skinType="32794">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe94" id="Dino Skin Unlocker">
@@ -18362,7 +18389,7 @@
       <Activate skinType="32795">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe95" id="Tomb Snake Skin Unlocker">
@@ -18377,7 +18404,7 @@
       <Activate skinType="32796">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe96" id="Chameleon Skin Unlocker">
@@ -18392,7 +18419,7 @@
       <Activate skinType="32797">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe97" id="Dragonfly Skin Unlocker">
@@ -18407,7 +18434,7 @@
       <Activate skinType="32798">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe98" id="Black Ant Skin Unlocker">
@@ -18422,7 +18449,7 @@
       <Activate skinType="32799">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe99" id="Blue Ant Skin Unlocker">
@@ -18437,7 +18464,7 @@
       <Activate skinType="32800">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe9a" id="Green Ant Skin Unlocker">
@@ -18452,7 +18479,7 @@
       <Activate skinType="32801">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe9b" id="Red Ant Skin Unlocker">
@@ -18467,7 +18494,7 @@
       <Activate skinType="32802">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe9c" id="Purple Ant Skin Unlocker">
@@ -18482,7 +18509,7 @@
       <Activate skinType="32803">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe9d" id="Penguin Skin Unlocker">
@@ -18497,7 +18524,7 @@
       <Activate skinType="32804">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe9e" id="Green Penguin Skin Unlocker">
@@ -18512,7 +18539,7 @@
       <Activate skinType="32805">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xe9f" id="Grape Penguin Skin Unlocker">
@@ -18527,7 +18554,7 @@
       <Activate skinType="32806">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xea0" id="Grass Penguin Skin Unlocker">
@@ -18542,7 +18569,7 @@
       <Activate skinType="32807">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xea1" id="Blue Snail Skin Unlocker">
@@ -18572,7 +18599,7 @@
       <Activate skinType="32809">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xea3" id="Purple Snail Skin Unlocker">
@@ -18587,7 +18614,7 @@
       <Activate skinType="32810">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xea4" id="Purple Frog Skin Unlocker">
@@ -18602,7 +18629,7 @@
       <Activate skinType="32811">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xea5" id="Sea Slurp Skin Unlocker">
@@ -18617,7 +18644,7 @@
       <Activate skinType="32812">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xea6" id="Turtle Skin Unlocker">
@@ -18632,7 +18659,7 @@
       <Activate skinType="32813">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xea7" id="Crab Skin Unlocker">
@@ -18647,7 +18674,7 @@
       <Activate skinType="32814">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xea8" id="Bat Skin Unlocker">
@@ -18662,7 +18689,7 @@
       <Activate skinType="32816">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xea9" id="Lil' Ghost Skin Unlocker">
@@ -18677,7 +18704,7 @@
       <Activate skinType="32817">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xeaa" id="Spirit Skin Unlocker">
@@ -18692,7 +18719,7 @@
       <Activate skinType="32818">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0xeab" id="Baby Skin Unlocker">
@@ -18707,7 +18734,7 @@
       <Activate skinType="32819">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>7</BagType>
       <feedPower>200</feedPower>
    </Object>
    <Object type="0x20c2" id="Orb of Aether">
@@ -19066,7 +19093,7 @@
          <Index>0x9b</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Grants a random Key when used!\n\n*Shaitan&#8217;s Key\n*Reef Key\n*Deadwater Docks Key\n*Woodland Labyrinth Key\n*The Crawling Depths Key\n*Cemetery Key\n*Davy&#8217;s Key\n*Mountain Temple Key\n*Ice Cave Key\n*Lab Key\n*Cursed Library Key\n*Puppet Master's Encore Key\n*Ocean Trench Key\n\nSprite Credits: Lovens</Description>
+      <Description>Grants a random Key when used!\n\n*Shaitan&#8217;s Key\n*Reef Key\n*Deadwater Docks Key\n*Woodland Labyrinth Key\n*The Crawling Depths Key\n*Cemetery Key\n*Davy&#8217;s Key\n*Mountain Temple Key\n*Ice Cave Key\n*Lab Key\n*Cursed Library Key\n*Puppet Master's Encore Key\n*Ocean Trench Key\n*Ancient Ruins Key\n\nSprite Credits: Lovens</Description>
       <Activate>MysteryDyes</Activate>
       <Consumable/>
       <Soulbound/>
@@ -20739,8 +20766,8 @@
       <Projectile>
          <ObjectId>Archer ST Arrow</ObjectId>
          <Speed>280</Speed>
-         <MinDamage>155</MinDamage>
-         <MaxDamage>250</MaxDamage>
+         <MinDamage>160</MinDamage>
+         <MaxDamage>200</MaxDamage>
          <LifetimeMS>200</LifetimeMS>
          <MultiHit/>
       </Projectile>
@@ -22341,7 +22368,7 @@
       <SlotType>27</SlotType>
       <Description>Carved from the unblemished minerals deep beneath the realm, this unconventional wakizashi fractures itself when swung to release a strange supernatural energy.</Description>
       <ExtraTooltipData>
-         <EffectInfo description="Summons sentient crystal star orbitting you for 5 seconds" name=""/>
+         <EffectInfo description="Summons sentient crystal star orbiting you for 5 seconds" name=""/>
          <EffectInfo description="Inflicts Exposed for 4 seconds, deals 350 damage per hit" name="Crystal Star"/>
       </ExtraTooltipData>
       <Activate objectId="Friendly Neighborhood Gemstone">Pet</Activate>
@@ -22854,8 +22881,8 @@
       <Projectile>
          <ObjectId>HArcher ST Arrow</ObjectId>
          <Speed>280</Speed>
-         <MinDamage>155</MinDamage>
-         <MaxDamage>250</MaxDamage>
+         <MinDamage>160</MinDamage>
+         <MaxDamage>200</MaxDamage>
          <LifetimeMS>200</LifetimeMS>
          <MultiHit/>
       </Projectile>
@@ -24952,7 +24979,7 @@
       <BagType>8</BagType>
       <FameBonus>5</FameBonus>
       <MpCost>105</MpCost>
-      <Activate color="0xADC718" duration="0" impactDamage="650" radius="3" throwTime="0.8" totalDamage="650">PoisonGrenade</Activate>
+      <Activate color="0xADC718" impactDamage="650" radius="3" throwTime="0.8" totalDamage="0">PoisonGrenade</Activate>
       <OnPlayerHitActivate proc="1" cooldown="6" duration="0" impactDamage="650" radius="3" throwTime="0.8" totalDamage="500" color="0xADC718">PoisonGrenade</OnPlayerHitActivate>
       <feedPower>900</feedPower>
       <Soulbound/>
@@ -25442,12 +25469,21 @@
       </Texture>
       <SlotType>10</SlotType>
       <Description>A wicked rune of Oryx's sword, held by the fiercest monsters in the realm known to cut down heroes without discretion.</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Usage" description="Activates the Sword Monument, one of three monuments needed to reach Oryx's Sanctuary."/>
+         <EffectInfo description=""/>
+         <EffectInfo name="Restoration" description="Upon deactivation of the Sword Monument, this item will be dropped on the ground."/>
+         <EffectInfo description=""/>
+         <EffectInfo name="Warning" description="Oryx's Sanctuary is only available on the RotMG Exalt client!"/>
+      </ExtraTooltipData>
       <Sound>use_key</Sound>
       <Treasure/>
+      <Consumable/>
+      -
       <BagType>4</BagType>
       <feedPower>750</feedPower>
       <Soulbound/>
-      <VaultItem/>
+      <Activate color="-1" retainItem="true" newId="Sanctuary Sword Monument Active" onlyInArea="Wine Cellar" radius="25" targetId="Sanctuary Sword Monument" customString="The Sword Monument has been activated">ChangeObject</Activate>
       <Track/>
    </Object>
    <Object type="0x2727" id="Shield Rune">
@@ -25459,12 +25495,20 @@
       </Texture>
       <SlotType>10</SlotType>
       <Description>A wicked rune of Oryx's shield, held by the most prominent minions Oryx trusts to guard his realm.</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Usage" description="Activates the Shield Monument, one of three monuments needed to reach Oryx's Sanctuary."/>
+         <EffectInfo description=""/>
+         <EffectInfo name="Restoration" description="Upon deactivation of the Shield Monument, this item will be dropped on the ground."/>
+         <EffectInfo description=""/>
+         <EffectInfo name="Warning" description="Oryx's Sanctuary is only available on the RotMG Exalt client!"/>
+      </ExtraTooltipData>
       <Sound>use_key</Sound>
       <Treasure/>
+      <Consumable/>
       <BagType>4</BagType>
       <feedPower>750</feedPower>
       <Soulbound/>
-      <VaultItem/>
+      <Activate color="-1" retainItem="true" newId="Sanctuary Shield Monument Active" onlyInArea="Wine Cellar" radius="25" targetId="Sanctuary Shield Monument" customString="The Shield Monument has been activated">ChangeObject</Activate>
       <Track/>
    </Object>
    <Object type="0x2728" id="Helmet Rune">
@@ -25476,12 +25520,20 @@
       </Texture>
       <SlotType>10</SlotType>
       <Description>A wicked rune of Oryx's helmet, held by the Mad God's equally lethal rivals.</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Usage" description="Activates the Helmet Monument, one of three monuments needed to reach Oryx's Sanctuary."/>
+         <EffectInfo description=""/>
+         <EffectInfo name="Restoration" description="Upon deactivation of the Helmet Monument, this item will be dropped on the ground."/>
+         <EffectInfo description=""/>
+         <EffectInfo name="Warning" description="Oryx's Sanctuary is only available on the RotMG Exalt client!"/>
+      </ExtraTooltipData>
       <Sound>use_key</Sound>
       <Treasure/>
+      <Consumable/>
       <BagType>4</BagType>
       <feedPower>750</feedPower>
       <Soulbound/>
-      <VaultItem/>
+      <Activate color="-1" retainItem="true" newId="Sanctuary Helmet Monument Active" onlyInArea="Wine Cellar" radius="25" targetId="Sanctuary Helmet Monument" customString="The Helmet Monument has been activated">ChangeObject</Activate>
       <Track/>
    </Object>
    <Object type="0x621b" id="Bronze Ticket">
@@ -25618,7 +25670,7 @@
          <Index>0x6f</Index>
       </Texture>
       <SlotType>15</SlotType>
-      <Description>This strange quiver that was created in a forgotten age by a lost tribe of Dark Elves.</Description>
+      <Description>This strange quiver was created in a forgotten age by a lost tribe of Dark Elves.</Description>
       <Sound>spell/fire_spray</Sound>
       <Projectile>
          <ObjectId>White Bolt</ObjectId>
@@ -26244,8 +26296,8 @@
       <ActivateOnEquip stat="0" amount="40">IncrementStat</ActivateOnEquip>
       <ActivateOnEquip stat="3" amount="40">IncrementStat</ActivateOnEquip>
       <Activate stat="0" amount="95" duration="4.5" range="4.5" noStack="true" useWisMod="true">StatBoostAura</Activate>
-      <Activate effect="Healing" duration="4.5" range="4.75" color="0xff0080" target="player" center="player" visualEffect="5" useWisMod="true">GenericActivate</Activate>
-      <Activate effect="Damaging" duration="4.5" range="4.75" color="0xff0080" target="player" center="player" visualEffect="0" useWisMod="true">GenericActivate</Activate>
+      <Activate effect="Healing" duration="4.5" range="4.5" color="0xff0080" target="player" center="player" visualEffect="5" useWisMod="true">GenericActivate</Activate>
+      <Activate effect="Damaging" duration="4.5" range="4.5" color="0xff0080" target="player" center="player" visualEffect="0" useWisMod="true">GenericActivate</Activate>
       <Soulbound/>
       <feedPower>570</feedPower>
    </Object>
@@ -26300,7 +26352,7 @@
       <SlotType>20</SlotType>
       <Tier>7</Tier>
       <Description>An explosive ocean trap constructed to tear open the ironhide of the abyssal deepworm.</Description>
-      <ActivateOnEquip stat="20" amount="4">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="20" amount="6">IncrementStat</ActivateOnEquip>
       <ActivateOnEquip stat="0" amount="40">IncrementStat</ActivateOnEquip>
       <ActivateOnEquip stat="3" amount="40">IncrementStat</ActivateOnEquip>
       <Usable/>
@@ -26387,7 +26439,7 @@
       </Texture>
       <SlotType>25</SlotType>
       <Tier>7</Tier>
-      <Description>A heraldic shuriken of the ancient royal family, revered for its astonishingly lethal edge.</Description>
+      <Description>A heraldic shuriken of the ancient royal family, revered for its astonishingly lethal edge after generations of use by a mighty eastern empire.</Description>
       <Sound>spell/fire_spray</Sound>
       <ExtraTooltipData>
          <EffectInfo name="While Key Held" description=""/>
@@ -26448,7 +26500,7 @@
       <Soulbound/>
       <feedPower>570</feedPower>
    </Object>
-   <Object type="0x2817" id="Spell of Galactic Creation">
+   <Object type="0x7080" id="Spell of Galactic Creation">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -26477,7 +26529,7 @@
       <Soulbound/>
       <feedPower>855</feedPower>
    </Object>
-   <Object type="0x2818" id="Tome of Sacred Thought">
+   <Object type="0x7081" id="Tome of Sacred Thought">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -26501,7 +26553,7 @@
       <Soulbound/>
       <feedPower>855</feedPower>
    </Object>
-   <Object type="0x2819" id="Quiver of Gaia">
+   <Object type="0x7082" id="Quiver of Gaia">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -26536,7 +26588,7 @@
       <Soulbound/>
       <feedPower>855</feedPower>
    </Object>
-   <Object type="0x281a" id="Cloak of Emptiness">
+   <Object type="0x7083" id="Cloak of Emptiness">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -26560,7 +26612,7 @@
       <Soulbound/>
       <feedPower>855</feedPower>
    </Object>
-   <Object type="0x281b" id="Helm of Imperial Right">
+   <Object type="0x7084" id="Helm of Imperial Right">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -26583,7 +26635,7 @@
       <Soulbound/>
       <feedPower>855</feedPower>
    </Object>
-   <Object type="0x281c" id="Shield of Belligerence">
+   <Object type="0x7085" id="Shield of Belligerence">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -26619,7 +26671,7 @@
       <Soulbound/>
       <feedPower>855</feedPower>
    </Object>
-   <Object type="0x281d" id="Seal of Righteous Victory">
+   <Object type="0x7086" id="Seal of Righteous Victory">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -26643,7 +26695,7 @@
       <Soulbound/>
       <feedPower>855</feedPower>
    </Object>
-   <Object type="0x281e" id="Grimhydra Poison">
+   <Object type="0x7087" id="Grimhydra Poison">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -26664,7 +26716,7 @@
       <Soulbound/>
       <feedPower>855</feedPower>
    </Object>
-   <Object type="0x281f" id="Sacrilege Skull">
+   <Object type="0x7088" id="Sacrilege Skull">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -26678,13 +26730,13 @@
       <BagType>9</BagType>
       <FameBonus>6</FameBonus>
       <MpCost>125</MpCost>
-      <ActivateOnEquip stat="0" amount="60">IncrementStat</ActivateOnEquip>
-      <ActivateOnEquip stat="3" amount="40">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="0" amount="150">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="3" amount="60">IncrementStat</ActivateOnEquip>
       <Activate radius="4.25" totalDamage="200" heal="130" ignoreDef="50" wisDamageBase="50">VampireBlast</Activate>
       <Soulbound/>
       <feedPower>855</feedPower>
    </Object>
-   <Object type="0x2820" id="Mantlecrusher Trap">
+   <Object type="0x7089" id="Mantlecrusher Trap">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -26705,7 +26757,7 @@
       <Soulbound/>
       <feedPower>855</feedPower>
    </Object>
-   <Object type="0x2821" id="Realitylapse Orb">
+   <Object type="0x7090" id="Realitylapse Orb">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -26728,7 +26780,7 @@
       <Soulbound/>
       <feedPower>855</feedPower>
    </Object>
-   <Object type="0x2822" id="Prism of Mindscapes">
+   <Object type="0x7091" id="Prism of Mindscapes">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -26750,7 +26802,7 @@
       <Soulbound/>
       <feedPower>855</feedPower>
    </Object>
-   <Object type="0x2823" id="Scepter of Luminous Winds">
+   <Object type="0x7092" id="Scepter of Luminous Winds">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -26772,7 +26824,7 @@
       <Soulbound/>
       <feedPower>855</feedPower>
    </Object>
-   <Object type="0x2824" id="Circle of Unity">
+   <Object type="0x7093" id="Circle of Unity">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -26811,7 +26863,7 @@
       <Soulbound/>
       <feedPower>855</feedPower>
    </Object>
-   <Object type="0x2825" id="Paragon Wakizashi">
+   <Object type="0x7094" id="Paragon Wakizashi">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -27043,6 +27095,34 @@
       <FameBonus>5</FameBonus>
       <Soulbound/>
    </Object>
+   <Object type="0xcffc" id="Nether Lute">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj6</File>
+         <Index>0xd8</Index>
+      </Texture>
+      <SlotType>28</SlotType>
+      <Tier>8</Tier>
+      <Description>A fiery lute consumed in scorching heat, whose sounds inspire hope among grief for the anguished souls bound to eternal perdition.</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Party Effect" description=" Within 4.5 sqrs Inspired for 7 seconds."/>
+         <EffectInfo name="Range Multiplier" description="x1.25"/>
+      </ExtraTooltipData>
+      <Sound>spell/major_heal</Sound>
+      <Usable/>
+      <Activate radius="4.5" duration="7" speedBoost="1.25" lifeBoost="1" targeted="false">BoostRange</Activate>
+      <ActivateOnEquip stat="22" amount="6">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="0" amount="60">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="3" amount="60">IncrementStat</ActivateOnEquip>
+      <Activate stat="21" amount="14" duration="5">StatBoostSelf</Activate>
+      <Cooldown>8</Cooldown>
+      <BagType>9</BagType>
+      <MpCost>110</MpCost>
+      <feedPower>855</feedPower>
+      <FameBonus>6</FameBonus>
+      <Soulbound/>
+   </Object>
    <Object id="BardST0" type="0x4df9" setType="0x4dfd" setName="Angelic Bard Set">
       <DisplayId>Harmonious Harp</DisplayId>
       <Class>Equipment</Class>
@@ -27085,8 +27165,8 @@
       <SlotType>28</SlotType>
       <Description>A resplendent trumpet used to signify the coming of the end times, prophesied to sound their most glorious note at the opening of the seventh seal.</Description>
       <ExtraTooltipData>
-         <EffectInfo description="Increases your attack by 12 for 4 secs" name="Harp"/>
-         <EffectInfo description="Increases your defense by 8 for 4 secs" name="Wings"/>
+         <EffectInfo description="Increases your attack by 8 for 4 secs" name="Harp"/>
+         <EffectInfo description="Increases your defense by 12 for 4 secs" name="Wings"/>
          <EffectInfo description="Within 4 sqrs Healing for 4 seconds" name="Halo"/>
          <EffectInfo name="Party Effect" description="Within 4 sqrs Inspired for 4 seconds."/>
       </ExtraTooltipData>
@@ -27807,7 +27887,7 @@
       </Texture>
       <Description>A glistening droplet of the god's nectar.\n\nSprite Credits: Aurum</Description>
       <BagType>7</BagType>
-      <feedPower>1400</feedPower>
+      <feedPower>1800</feedPower>
       <PetFood/>
       <Soulbound/>
    </Object>
@@ -27821,7 +27901,7 @@
       </Texture>
       <Description>Your secret weapon against the monsters in the realm.\n\nSprite Credits: Seelpit</Description>
       <BagType>7</BagType>
-      <feedPower>2000</feedPower>
+      <feedPower>2400</feedPower>
       <PetFood/>
       <Soulbound/>
    </Object>
@@ -27835,8 +27915,1103 @@
       </Texture>
       <Description>A sip of this will make you feel like a real god.</Description>
       <BagType>7</BagType>
-      <feedPower>2900</feedPower>
+      <feedPower>3700</feedPower>
       <PetFood/>
+      <Soulbound/>
+   </Object>
+   <Object type="0x709d" id="Avarice">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x290</Index>
+      </Texture>
+      <SlotType>2</SlotType>
+      <Description>The pride of Treasurer Gemsbok, this gilded knife has backstabbed countless traders in shady dealings.</Description>
+      <RateOfFire>1</RateOfFire>
+      <Sound>weapon/fire_dagger</Sound>
+      <Projectile>
+         <ObjectId>Avarice Projectile</ObjectId>
+         <Speed>133</Speed>
+         <MinDamage>165</MinDamage>
+         <MaxDamage>185</MaxDamage>
+         <LifetimeMS>450</LifetimeMS>
+         <Amplitude>0.55</Amplitude>
+         <Frequency>0.5</Frequency>
+         <FaceDir/>
+      </Projectile>
+      <NumProjectiles>1</NumProjectiles>
+      <BagType>6</BagType>
+      <FameBonus>7</FameBonus>
+      <OldSound>daggerSwing</OldSound>
+      <feedPower>1200</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x709e" id="Gambler's Fate">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x291</Index>
+      </Texture>
+      <SlotType>22</SlotType>
+      <Description>A coin pilfered from the endless vault of Gemsbok's hoarded wealth. Only the most daring would stake their lives on the equal odds of a coin flip.</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="On Ability Use" description="Summons a Gold Coin that acts as a decoy. Each second it has a 50% chance to become silver or continue to exist."/>
+         <EffectInfo name="Silver Coin" description="Acts as a decoy. Each second it has a 50% chance to disappear or continue to exist."/>
+      </ExtraTooltipData>
+      <ActivateOnEquip stat="20" amount="4">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="28" amount="4">IncrementStat</ActivateOnEquip>
+      <Usable/>
+      <BagType>6</BagType>
+      <FameBonus>7</FameBonus>
+      <MpCost>90</MpCost>
+      <Cooldown>2</Cooldown>
+      <Activate objectId="Gambler's Fate Effect" throwTime="0.8" color="0xff1919">ObjectToss</Activate>
+      <feedPower>1300</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x70a0" id="Turncoat Cape">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x292</Index>
+      </Texture>
+      <SlotType>6</SlotType>
+      <Description>This covering is assigned to Oryx's negotiators to conceal weaponry and get away with stolen fortunes.</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="On taking over 40 damage" description="Invisible for 2 seconds"/>
+         <EffectInfo name="Cooldown" description="5 seconds"/>
+      </ExtraTooltipData>
+      <ActivateOnEquip stat="21" amount="18">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip>
+      <OnPlayerHitActivate cooldown="5" duration="2" effect="Invisible" damageThreshold="40" proc="1.0">ConditionEffectSelf</OnPlayerHitActivate>
+      <BagType>6</BagType>
+      <FameBonus>7</FameBonus>
+      <feedPower>1100</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x70a1" id="Collector's Monocle">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x293</Index>
+      </Texture>
+      <SlotType>9</SlotType>
+      <Description>Treasurer Gemsbok had this monocle custom made to enhance his perception in stealth strikes.</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="On Shoot" description="Boosts attack by 12 for 4 second if the user is Invisible"/>
+         <EffectInfo name="Cooldown" description="1.4 seconds"/>
+      </ExtraTooltipData>
+      <ActivateOnEquip stat="0" amount="140">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="20" amount="8">IncrementStat</ActivateOnEquip>
+      <OnPlayerShootActivate stat="20" amount="12" color="-1" noStack="true" requiredConditions="Invisible" cooldown="1.4" duration="4" proc="1">StatBoostSelf</OnPlayerShootActivate>
+      <BagType>6</BagType>
+      <FameBonus>7</FameBonus>
+      <feedPower>1000</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x70a2" id="Lumiaire">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x294</Index>
+      </Texture>
+      <SlotType>8</SlotType>
+      <Description>This ceremonial mace controls the forces of light and darkness. Archbishop Leucoryx uses it for distinguished offerings in the name of his god.</Description>
+      <RateOfFire>1.5</RateOfFire>
+      <Sound>weapon/wand_of_death</Sound>
+      <Projectile>
+         <ObjectId>Lumiaire Projectile</ObjectId>
+         <Speed>50</Speed>
+         <MinDamage>90</MinDamage>
+         <MaxDamage>110</MaxDamage>
+         <LifetimeMS>1800</LifetimeMS>
+         <Amplitude>0.5</Amplitude>
+         <Frequency>1.5</Frequency>
+         <Size>100</Size>
+      </Projectile>
+      <NumProjectiles>2</NumProjectiles>
+      <ArcGap>6</ArcGap>
+      <BagType>6</BagType>
+      <FameBonus>7</FameBonus>
+      <OldSound>magicShoot</OldSound>
+      <feedPower>1200</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x70a3" id="Chaotic Scripture">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x295</Index>
+      </Texture>
+      <SlotType>4</SlotType>
+      <Description>The sacred writings of Leucoryx and his disciples, compiled as a tribute to Oryx to lend false credence to the teachings of his twisted followers.</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="On Ability Activate" description="Summons a Chaos Beam on your cursor, striking instantly for 1800-2200 armor piercing damage in a 2.5 square radius."/>
+         <EffectInfo description="Party heal is not affected by wisdom."/>
+      </ExtraTooltipData>
+      <Sound>spell/major_heal</Sound>
+      <ActivateOnEquip stat="26" amount="6">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="0" amount="60">IncrementStat</ActivateOnEquip>
+      <Activate objectId="Chaotic Scripture Effect" throwTime="0">ObjectToss</Activate>
+      <Activate range="6.5" amount="150">HealNova</Activate>
+      <Usable/>
+      <BagType>6</BagType>
+      <FameBonus>7</FameBonus>
+      <MpCost>100</MpCost>
+      <feedPower>1300</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x70a5" id="Vesture of Duality">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x296</Index>
+      </Texture>
+      <SlotType>14</SlotType>
+      <ExtraTooltipData>
+         <EffectInfo name="On Ability Use" description="Boosts attack by 15 and decreases defense by 6 for 5 seconds"/>
+         <EffectInfo name="Cooldown" description="5 seconds"/>
+      </ExtraTooltipData>
+      <Description>This cursed robe overwhelms the wearer with conflicting thoughts of good and evil, shattering the will of the weak-minded.</Description>
+      <ActivateOnEquip stat="21" amount="12">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="3" amount="40">IncrementStat</ActivateOnEquip>
+      <OnPlayerAbilityActivate cooldown="0" noStack="true" proc="1" amount="-6" duration="5" stat="21">StatBoostSelf</OnPlayerAbilityActivate>
+      <OnPlayerAbilityActivate cooldown="0" noStack="true" proc="1" amount="15" duration="5" stat="20">StatBoostSelf</OnPlayerAbilityActivate>
+      <BagType>6</BagType>
+      <FameBonus>7</FameBonus>
+      <feedPower>1100</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x70a6" id="Divine Coronation">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x297</Index>
+      </Texture>
+      <SlotType>9</SlotType>
+      <Description>A majestic crown of the venerated, bestowed upon Archbishop Leucoryx to solidify his position in Oryx's legion.</Description>
+      <ActivateOnEquip stat="0" amount="90">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="3" amount="40">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="28" amount="8">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip>
+      <BagType>6</BagType>
+      <FameBonus>7</FameBonus>
+      <feedPower>1000</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x70a7" id="Superior">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2a0</Index>
+      </Texture>
+      <SlotType>17</SlotType>
+      <Description>This aptly named staff is the manifestation of Chancellor Dammah's assertions of grandeur. Although he seldom uses it for actual combat purposes, it is no less potent as a legitimate weapon.</Description>
+      <RateOfFire>1.0</RateOfFire>
+      <Sound>weapon/sprite_wand</Sound>
+      <Projectile>
+         <ObjectId>Superior Projectile</ObjectId>
+         <Speed>150</Speed>
+         <MinDamage>45</MinDamage>
+         <MaxDamage>75</MaxDamage>
+         <LifetimeMS>415</LifetimeMS>
+         <Amplitude>0.5</Amplitude>
+         <Frequency>1.5</Frequency>
+      </Projectile>
+      <BagType>6</BagType>
+      <FameBonus>7</FameBonus>
+      <NumProjectiles>4</NumProjectiles>
+      <ArcGap>3</ArcGap>
+      <OldSound>magicShoot</OldSound>
+      <feedPower>1200</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x70a8" id="Genesis Spell">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2a1</Index>
+      </Texture>
+      <SlotType>11</SlotType>
+      <Description>Dammah's powers of summoning portals stem from this profane spell. Most may use it to call attacks from primitive dimensions of untapped energy, but Oryx's greatest thaumaturges can create stable gateways to the realm and beyond.</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="On Ability Use" description="Summons 4 portals which zap enemies and deal 250 damage in a radius of 6 every 0.4 seconds"/>
+         <EffectInfo name="Duration" description="4 seconds"/>
+      </ExtraTooltipData>
+      <Sound>spell/magic_nova</Sound>
+      <Usable/>
+      <BagType>6</BagType>
+      <FameBonus>7</FameBonus>
+      <Cooldown>4</Cooldown>
+      <MpCost>120</MpCost>
+      <Activate objectId="Genesis Spell Portal 1" throwTime="0" color="-1">ObjectToss</Activate>
+      <Activate objectId="Genesis Spell Portal 2" throwTime="0" color="-1">ObjectToss</Activate>
+      <Activate objectId="Genesis Spell Portal 3" throwTime="0" color="-1">ObjectToss</Activate>
+      <Activate objectId="Genesis Spell Portal 4" throwTime="0" color="-1">ObjectToss</Activate>
+      <feedPower>1300</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x70ab" id="Diplomatic Robe">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2a2</Index>
+      </Texture>
+      <SlotType>14</SlotType>
+      <Description>The diplomacy of Chancellor Dammah goes as far as his limited patience. The true purpose of this robe is its deeply woven enchantment to bolster arcane powers.</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="On Taking Damage" description="Shots above 50 damage summon a portal which deals 250 damage and zaps enemies in a radius of 5 every 0.4 seconds"/>
+         <EffectInfo name="Duration" description="4 seconds"/>
+         <EffectInfo name="Cooldown" description="4 seconds"/>
+      </ExtraTooltipData>
+      <ActivateOnEquip stat="21" amount="11">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="0" amount="50">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+      <OnPlayerHitActivate cooldown="4" damageThreshold="50" proc="1.0" duration="4" objectId="Genesis Spell Portal Rand">Pet</OnPlayerHitActivate>
+      <BagType>6</BagType>
+      <FameBonus>7</FameBonus>
+      <feedPower>1100</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x70ac" id="Chancellor's Cranium">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2a3</Index>
+      </Texture>
+      <SlotType>9</SlotType>
+      <Description>The warped mind of Oryx's appointed chancellor. This cursed object thrives in the presence of demented energies.</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="On Taking Damage" description="Shots above 50 damage summon a following cranium which deals 150 damage every 0.2 seconds for 5 seconds and zaps enemies in a radius of 6"/>
+         <EffectInfo name="Cooldown" description="5 seconds"/>
+      </ExtraTooltipData>
+      <ActivateOnEquip stat="28" amount="3">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="21" amount="6">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="0" amount="120">IncrementStat</ActivateOnEquip>
+      <OnPlayerHitActivate cooldown="5" damageThreshold="50" proc="1.0" throwTime="0.0" objectId="Cranium Effect">ObjectToss</OnPlayerHitActivate>
+      <BagType>6</BagType>
+      <FameBonus>7</FameBonus>
+      <feedPower>1000</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x70ae" id="Enforcer">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2a4</Index>
+      </Texture>
+      <SlotType>24</SlotType>
+      <Description>Chief Beisa designed and forged this sawtoothed blade himself to be granted admission as a gladiator. Its shattering strikes are amplified by his own slashing techniques.</Description>
+      <RateOfFire>1</RateOfFire>
+      <Sound>weapon/long_sword</Sound>
+      <Projectile>
+         <ObjectId>Enforcer Projectile</ObjectId>
+         <Speed>140</Speed>
+         <MinDamage>100</MinDamage>
+         <MaxDamage>140</MaxDamage>
+         <LifetimeMS>420</LifetimeMS>
+      </Projectile>
+      <NumProjectiles>2</NumProjectiles>
+      <ArcGap>6</ArcGap>
+      <BagType>6</BagType>
+      <FameBonus>7</FameBonus>
+      <OldSound>bladeSwing</OldSound>
+      <feedPower>1200</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x70af" id="Ballistic Star">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2a5</Index>
+      </Texture>
+      <SlotType>25</SlotType>
+      <Description>To dominate the battlefield, Beisa's assault units possess this star model to remain vigorous in combat before controlling zones with its independent throwing arcs.</Description>
+      <Sound>spell/fire_spray</Sound>
+      <ExtraTooltipData>
+         <EffectInfo description="Throws 4 parametric stars" name="On Ability Use"/>
+         <EffectInfo description="Throws an additional 4 parametric stars at half the range which inflict Stunned on enemies for 3 seconds" name="Inner Circle"/>
+      </ExtraTooltipData>
+      <Projectile>
+         <ObjectId>StarTestProj</ObjectId>
+         <Speed>0</Speed>
+         <MinDamage>400</MinDamage>
+         <MaxDamage>400</MaxDamage>
+         <LifetimeMS>2000</LifetimeMS>
+         <Amplitude>3</Amplitude>
+         <Frequency>1</Frequency>
+         <Magnitude>3</Magnitude>
+         <Size>100</Size>
+         <Parametric/>
+         <ArmorPiercing/>
+         <MultiHit/>
+      </Projectile>
+      <Usable/>
+      <BagType>6</BagType>
+      <FameBonus>7</FameBonus>
+      <MpCost>100</MpCost>
+      <Activate arcGap="0" gapAngle="0" gapTiles="0" ignoreOnTooltip="true" maxDistance="0.001" minDistance="0.001" numShots="4" offsetAngle="0">BulletCreate</Activate>
+      <OnPlayerAbilityActivate targetMouse="true" arcGap="0" cooldown="0.2" gapAngle="0" gapTiles="0" manaCost="0" manaRequired="0" maxDistance="0.001" minDistance="0.001" numShots="4" offsetAngle="90" proc="1" type="0x5279">BulletCreate</OnPlayerAbilityActivate>
+      <Activate duration="4" effect="Healing">ConditionEffectSelf</Activate>
+      <Soulbound/>
+      <feedPower>1300</feedPower>
+   </Object>
+   <Object id="StarTest" type="0x5279">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2a8</Index>
+      </Texture>
+      <SlotType>15</SlotType>
+      <Soulbound/>
+      <Projectile>
+         <ObjectId>StarTestProjB</ObjectId>
+         <Speed>0</Speed>
+         <MinDamage>400</MinDamage>
+         <MaxDamage>400</MaxDamage>
+         <LifetimeMS>2000</LifetimeMS>
+         <Amplitude>3</Amplitude>
+         <Frequency>1</Frequency>
+         <Magnitude>1.5</Magnitude>
+         <Size>100</Size>
+         <Parametric/>
+         <ArmorPiercing/>
+         <MultiHit/>
+         <ConditionEffect duration="3">Stunned</ConditionEffect>
+      </Projectile>
+   </Object>
+   <Object type="0x70b0" id="Centaur's Shielding">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2a6</Index>
+      </Texture>
+      <SlotType>6</SlotType>
+      <Description>Specially weighted plates layered inside this armor channel greater force into every motion of the body for destructive blows.</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="On Shoot" description="Increases attack by 12 for 3 seconds if the user has the Healing status effect"/>
+         <EffectInfo name="Cooldown" description="6 seconds"/>
+      </ExtraTooltipData>
+      <ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="28" amount="7">IncrementStat</ActivateOnEquip>
+      <OnPlayerShootActivate cooldown="6" duration="3" stat="20" amount="12" requiredConditions="Healing" proc="1.0" color="0xdd5af0">StatBoostSelf</OnPlayerShootActivate>
+      <BagType>6</BagType>
+      <FameBonus>7</FameBonus>
+      <feedPower>1100</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x70b1" id="Battalion Banner">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2a7</Index>
+      </Texture>
+      <SlotType>9</SlotType>
+      <Description>The battle standard of Beisa's forces, a sign of triumph for Oryx and calamity for those he faces.</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="On Ability Use" description="Summons a banner which deals 400-600 damage each second within 6 tiles and grants Damaging to players within 3 tiles."/>
+         <EffectInfo name="Cooldown" description="10 seconds"/>
+      </ExtraTooltipData>
+      <ActivateOnEquip amount="90" stat="0">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip amount="4" stat="22">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip amount="4" stat="28">IncrementStat</ActivateOnEquip>
+      <OnPlayerAbilityActivate proc="1" cooldown="10" duration="4" objectId="Battalion Banner Effect">Pet</OnPlayerAbilityActivate>
+      <BagType>6</BagType>
+      <FameBonus>7</FameBonus>
+      <feedPower>1000</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x70b3" id="Divinity">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2b0</Index>
+      </Texture>
+      <SlotType>1</SlotType>
+      <Description>The chosen blade of Oryx the Mad God, charged with an unrelenting energy to subdue all that lies before it.</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Celestial Strength" description="Attack with Exalted Beams"/>
+         <EffectInfo name="Exalted Beam" description="Deals 600-800 damage in a 2.25 square radius, scaling with your Attack and Status Effects"/>
+         <EffectInfo name="Beam Range" description="Instantly strikes 4 tiles away in the direction of your attack"/>
+         <EffectInfo name="Beam Cooldown" description="1.4 seconds"/>
+      </ExtraTooltipData>
+      <RateOfFire>0.6</RateOfFire>
+      <Sound>weapon/mithril_sword</Sound>
+      <Projectile>
+         <ObjectId>Divinity Projectile</ObjectId>
+         <Speed>150</Speed>
+         <MinDamage>275</MinDamage>
+         <MaxDamage>325</MaxDamage>
+         <LifetimeMS>267</LifetimeMS>
+         <Size>100</Size>
+         <MultiHit/>
+      </Projectile>
+      <OnPlayerShootActivate proc="1" targetMouse="true" cooldown="1.4" objectId="Divinity Effect" throwTime="0" color="-1" targetMouseRange="4" centerObject="false">ObjectToss</OnPlayerShootActivate>
+      <BagType>6</BagType>
+      <FameBonus>8</FameBonus>
+      <OldSound>bladeSwing</OldSound>
+      <feedPower>1200</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x70b5" id="Oryx's Escutcheon">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2b1</Index>
+      </Texture>
+      <SlotType>5</SlotType>
+      <Description>An enormous shield decorated with the crest of Oryx, an infamous symbol of oppression dreaded across the realm.</Description>
+      <Sound>spell/fire_spray</Sound>
+      <ExtraTooltipData>
+         <EffectInfo name="On Ability Use" description="Summons three consecutive Exalted Beams that each deal 850-950 damage in a 2.25 square radius, inflicting Stunned for 1.4 seconds"/>
+         <EffectInfo name="Max Cast Range" description="2.5 squares"/>
+         <EffectInfo name="Cooldown" description="2 seconds"/>
+      </ExtraTooltipData>
+      <ActivateOnEquip stat="22" amount="7">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>
+      <Activate maxDistance="2.5" objectId="Oryx's Escutcheon Effect 1" throwTime="0" color="-1">ObjectToss</Activate>
+      <Activate maxDistance="2.5" objectId="Oryx's Escutcheon Effect 1" throwTime="0.8" color="-1">ObjectToss</Activate>
+      <Activate maxDistance="2.5" objectId="Oryx's Escutcheon Effect 1" throwTime="1.6" color="-1">ObjectToss</Activate>
+      <MpCost>100</MpCost>
+      <Usable/>
+      <BagType>6</BagType>
+      <FameBonus>8</FameBonus>
+      <feedPower>1300</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x70b7" id="Gladiator Guard">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2b2</Index>
+      </Texture>
+      <Description>Although refurbished, this breastplate is the very same Oryx received as a gift from the royal family in celebration of his gladiatorial prowess.</Description>
+      <SlotType>7</SlotType>
+      <ActivateOnEquip stat="22" amount="7">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="21" amount="20">IncrementStat</ActivateOnEquip>
+      <BagType>6</BagType>
+      <FameBonus>8</FameBonus>
+      <feedPower>1100</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x70b8" id="Exalted God's Horn">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2b3</Index>
+      </Texture>
+      <SlotType>9</SlotType>
+      <Description>A horn claimed from Oryx's iconic helmet. To hold this in one's hand is a monumental insult to the Mad God's ego.</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Mad God's Hubris" description="Gain +10 dexterity while attacking if your health is above 90% Max HP"/>
+      </ExtraTooltipData>
+      <ActivateOnEquip amount="140" stat="0">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip amount="5" stat="21">IncrementStat</ActivateOnEquip>
+      <OnPlayerShootActivate cooldown="0.6" noStack="true" hpRequiredRelative="0.9" proc="1" amount="10" duration="1.4" stat="28" color="-1">StatBoostSelf</OnPlayerShootActivate>
+      <BagType>6</BagType>
+      <FameBonus>8</FameBonus>
+      <feedPower>1000</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x2220" id="Exalted Essence">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x25a</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>An illuminated elixir of divine energy, regenerating its contents to never fully deplete.</Description>
+      <Activate amount="8" duration="10" stat="20">StatBoostSelf</Activate>
+      <Activate cooldown="20" amount="8" duration="10" stat="22">StatBoostSelf</Activate>
+      <Sound>use_key</Sound>
+      <Soulbound/>
+      <feedPower>250</feedPower>
+      <BagType>6</BagType>
+      <InvUse/>
+   </Object>
+   <Object type="0x70d0" id="Mark of the Sandstone Titan">
+      <Class>Equipment</Class>
+      <Item/>
+      <SlotType>10</SlotType>
+      <Texture>
+         <File>ancientRuinsObjects8x8</File>
+         <Index>0x43</Index>
+      </Texture>
+      <Description>A medallion infused with the essence of the Sandstone Titan.</Description>
+      <ExtraTooltipData>
+         <EffectInfo description="Quest item" name="Type"/>
+         <EffectInfo description="Obtained by defeating the Sandstone Titan in the Ancient Ruins" name="Drop location"/>
+      </ExtraTooltipData>
+      <Sound>spell/fire_nova</Sound>
+      <BagType>2</BagType>
+      <Treasure/>
+      <feedPower>50</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x25bb" id="Arcane Rapier">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>ancientRuinsObjects8x8</File>
+         <Index>0x00</Index>
+      </Texture>
+      <SlotType>1</SlotType>
+      <Description>This sword&#8217;s blade is infused with magical essence, causing it to fire out violently upon lunging. That same magical force pulls the blade back to its hilt after striking.</Description>
+      <RateOfFire>1.0</RateOfFire>
+      <Projectile>
+         <ObjectId>Arcane Blade</ObjectId>
+         <Speed>200</Speed>
+         <MinDamage>165</MinDamage>
+         <MaxDamage>220</MaxDamage>
+         <LifetimeMS>400</LifetimeMS>
+         <MultiHit/>
+         <Boomerang/>
+      </Projectile>
+      <BagType>6</BagType>
+      <FameBonus>5</FameBonus>
+      <OldSound>bladeSwing</OldSound>
+      <feedPower>600</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x25bc" id="Sandstone Seal">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>ancientRuinsObjects8x8</File>
+         <Index>0x02</Index>
+      </Texture>
+      <SlotType>12</SlotType>
+      <Description>Created to guide the spirits of the desert, this seal has infused itself with their energy over many years. This spiritual energy affects living creatures in unconventional ways compared to normal practices.</Description>
+      <Sound>spell/light_heal</Sound>
+      <Usable/>
+      <Activate amount="20" duration="5" noStack="false" range="5" stat="26" useWisMod="true">StatBoostAura</Activate>
+      <Activate center="player" color="0xff0080" duration="5" effect="Damaging" range="5" target="player" useWisMod="true" visualEffect="0">GenericActivate</Activate>
+      <ActivateOnEquip amount="40" stat="0">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip amount="3" stat="28">IncrementStat</ActivateOnEquip>
+      <MpCost>70</MpCost>
+      <BagType>4</BagType>
+      <FameBonus>4</FameBonus>
+      <feedPower>350</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x25bd" id="Amber Encrusted Helmet">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>ancientRuinsObjects8x8</File>
+         <Index>0x03</Index>
+      </Texture>
+      <SlotType>16</SlotType>
+      <Description>Decorated with ancient amber, this helmet's idle solitude over many years have caused its abilities to dwindle.</Description>
+      <Usable/>
+      <MpCost>70</MpCost>
+      <Activate duration="5" effect="Berserk" range="5">ConditionEffectAura</Activate>
+      <Cooldown>6</Cooldown>
+      <ActivateOnEquip amount="6" stat="21">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip amount="6" stat="22">IncrementStat</ActivateOnEquip>
+      <BagType>4</BagType>
+      <FameBonus>4</FameBonus>
+      <feedPower>350</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x70e5" id="Cactus Juice">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>ancientRuinsObjects8x8</File>
+         <Index>0x5b</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Refreshing water from within a desert cactus. Good for quenching thirst, but infamous for its unpredictable effects on one's mind.</Description>
+      <Sound>use_potion</Sound>
+      <Activate amount="120">Heal</Activate>
+      <Activate amount="120">Magic</Activate>
+      <Activate duration="7.5" effect="Hallucinating">ConditionEffectSelf</Activate>
+      <Consumable/>
+      <Potion/>
+      <BagType>2</BagType>
+      <feedPower>40</feedPower>
+      <DropTradable/>
+   </Object>
+   <Object type="0x3ff6" id="Mystery Archer ST Crate">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x25c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A crate which contains an assortment of exotic goods for famous treasure hunters. Open it to get one of the following:\n\n*Resplendent Bow\n*Embellished Quiver\n*Ornate Armor\n*Aquamarine Amulet\n*Mini Treasure Hunter Archer Skin\n*Char Slot Unlocker\n*Vault Chest Unlocker\n*Ambrosia\n*Mystery ST Shard x5\n*Golden Clover\n\nSprite Credits: Aurum</Description>
+      <Activate>MysteryDyes</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <Track/>
+   </Object>
+   <Object type="0x3ff7" id="Mystery Rogue ST Crate">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x25d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A crate which contains the wicked equipment of dark practitioners. Open it to get one of the following:\n\n*Soulcursed Scythe\n*Vampiric Cape\n*Hallowed Hide\n*Ruthven's Rosary\n*Mini Vampire Rogue Skin\n*Char Slot Unlocker\n*Vault Chest Unlocker\n*Ambrosia\n*Mystery ST Shard x5\n*Golden Clover</Description>
+      <Activate>MysteryDyes</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <Track/>
+   </Object>
+   <Object id="ChainScytheProcA" type="0x45cf">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x616</Index>
+      </Texture>
+      <SlotType>15</SlotType>
+      <Soulbound/>
+      <Projectile>
+         <ObjectId>ChainScytheChain</ObjectId>
+         <Speed>25</Speed>
+         <MinDamage>50</MinDamage>
+         <MaxDamage>50</MaxDamage>
+         <LifetimeMS>500</LifetimeMS>
+         <Amplitude>4</Amplitude>
+         <Frequency>0.5</Frequency>
+         <Size>80</Size>
+         <MultiHit/>
+         <PassesCover/>
+      </Projectile>
+   </Object>
+   <Object id="ChainScytheProcB" type="0x45d0">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x616</Index>
+      </Texture>
+      <SlotType>15</SlotType>
+      <Soulbound/>
+      <Projectile>
+         <ObjectId>ChainScytheChain</ObjectId>
+         <Speed>12.5</Speed>
+         <MinDamage>50</MinDamage>
+         <MaxDamage>50</MaxDamage>
+         <LifetimeMS>500</LifetimeMS>
+         <Amplitude>2.5</Amplitude>
+         <Frequency>0.5</Frequency>
+         <Size>80</Size>
+         <MultiHit/>
+         <PassesCover/>
+      </Projectile>
+   </Object>
+   <Object id="ChainScytheProcC" type="0x45d1">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x616</Index>
+      </Texture>
+      <SlotType>15</SlotType>
+      <Soulbound/>
+      <Projectile>
+         <ObjectId>ChainScytheChain</ObjectId>
+         <Speed>6.25</Speed>
+         <MinDamage>50</MinDamage>
+         <MaxDamage>50</MaxDamage>
+         <LifetimeMS>500</LifetimeMS>
+         <Amplitude>1</Amplitude>
+         <Frequency>0.5</Frequency>
+         <Size>100</Size>
+         <MultiHit/>
+         <PassesCover/>
+      </Projectile>
+   </Object>
+   <Object id="ChainScytheProcD" type="0x45d2">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x616</Index>
+      </Texture>
+      <SlotType>15</SlotType>
+      <Soulbound/>
+      <Projectile>
+         <ObjectId>ChainScytheChain</ObjectId>
+         <Speed>0</Speed>
+         <MinDamage>0</MinDamage>
+         <MaxDamage>0</MaxDamage>
+         <LifetimeMS>0</LifetimeMS>
+         <Amplitude>.5</Amplitude>
+         <Frequency>0.5</Frequency>
+         <Size>80</Size>
+      </Projectile>
+   </Object>
+   <Object id="ChainScytheProcE" type="0x45d3">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x617</Index>
+      </Texture>
+      <SlotType>15</SlotType>
+      <Soulbound/>
+      <Projectile>
+         <ObjectId>ChainScytheProj</ObjectId>
+         <Speed>50</Speed>
+         <MinDamage>100</MinDamage>
+         <MaxDamage>300</MaxDamage>
+         <LifetimeMS>500</LifetimeMS>
+         <Amplitude>5.5</Amplitude>
+         <Frequency>0.5</Frequency>
+         <Size>90</Size>
+         <MultiHit/>
+         <PassesCover/>
+         <FaceDir/>
+      </Projectile>
+   </Object>
+   <Object id="2ArcherST1A" type="0x52c4">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x5fc</Index>
+      </Texture>
+      <SlotType>15</SlotType>
+      <Soulbound/>
+      <Projectile>
+         <ObjectId>Embellished Shard</ObjectId>
+         <Speed>75</Speed>
+         <MinDamage>150</MinDamage>
+         <MaxDamage>150</MaxDamage>
+         <LifetimeMS>800</LifetimeMS>
+         <MultiHit/>
+         <ConditionEffect duration="2">Slowed</ConditionEffect>
+         <ArmorPiercing/>
+      </Projectile>
+   </Object>
+   <Object id="2ArcherST1B" type="0x52c5">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x5fd</Index>
+      </Texture>
+      <SlotType>15</SlotType>
+      <Soulbound/>
+      <Projectile>
+         <ObjectId>Lesser Embellished Shard</ObjectId>
+         <Speed>100</Speed>
+         <MinDamage>100</MinDamage>
+         <MaxDamage>100</MaxDamage>
+         <LifetimeMS>800</LifetimeMS>
+         <MultiHit/>
+         <ArmorPiercing/>
+      </Projectile>
+   </Object>
+   <Object id="2ArcherST1C" type="0x4216">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x5fb</Index>
+      </Texture>
+      <SlotType>15</SlotType>
+      <Soulbound/>
+      <Projectile>
+         <ObjectId>Greater Embellished Shard</ObjectId>
+         <Speed>50</Speed>
+         <MinDamage>125</MinDamage>
+         <MaxDamage>125</MaxDamage>
+         <LifetimeMS>800</LifetimeMS>
+         <MultiHit/>
+         <ConditionEffect duration="2">Paralyzed</ConditionEffect>
+         <ArmorPiercing/>
+      </Projectile>
+   </Object>
+   <Object id="2ArcherST1D" type="0x4217">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x5fc</Index>
+      </Texture>
+      <SlotType>15</SlotType>
+      <Soulbound/>
+      <Projectile>
+         <ObjectId>Embellished Shard</ObjectId>
+         <Speed>75</Speed>
+         <MinDamage>75</MinDamage>
+         <MaxDamage>75</MaxDamage>
+         <LifetimeMS>800</LifetimeMS>
+         <MultiHit/>
+         <ConditionEffect duration="2">Slowed</ConditionEffect>
+         <ArmorPiercing/>
+      </Projectile>
+   </Object>
+   <Object id="2ArcherST1E" type="0x4218">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x5fd</Index>
+      </Texture>
+      <SlotType>15</SlotType>
+      <Soulbound/>
+      <Projectile>
+         <ObjectId>Lesser Embellished Shard</ObjectId>
+         <Speed>100</Speed>
+         <MinDamage>50</MinDamage>
+         <MaxDamage>50</MaxDamage>
+         <LifetimeMS>800</LifetimeMS>
+         <MultiHit/>
+         <ArmorPiercing/>
+      </Projectile>
+   </Object>
+   <Object id="2RogueST0" type="0x45cc" setName="Vampire Rogue Set" setType="0x45e0">
+      <DisplayId>Soulcursed Scythe</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x610</Index>
+      </Texture>
+      <SlotType>2</SlotType>
+      <Description>A two-faced blade enchanted with the wicked power of immortal beings.</Description>
+      <ExtraTooltipData>
+         <EffectInfo description="Shoots a powerful scythe" name="When Invisible"/>
+         <EffectInfo description="50" name="Chain Damage"/>
+         <EffectInfo description="100-300" name="Blade Damage"/>
+         <EffectInfo description="5.5" name="Scythe Range"/>
+      </ExtraTooltipData>
+      <BagType>8</BagType>
+      <FameBonus>5</FameBonus>
+      <feedPower>900</feedPower>
+      <Soulbound/>
+      <RateOfFire>0.35</RateOfFire>
+      <OldSound>daggerSwing</OldSound>
+      <Projectile>
+         <ObjectId>Scythe Dagger</ObjectId>
+         <Speed>100</Speed>
+         <MinDamage>300</MinDamage>
+         <MaxDamage>400</MaxDamage>
+         <LifetimeMS>400</LifetimeMS>
+         <Size>100</Size>
+      </Projectile>
+      <OnPlayerShootActivate targetMouse="true" cooldown="0.8" manaCost="0" manaRequired="0" maxDistance="0.001" minDistance="0.001" numShots="1" offsetAngle="270" proc="1" type="0x45d3" requiredConditions="Invisible">BulletCreate</OnPlayerShootActivate>
+      <OnPlayerShootActivate targetMouse="true" cooldown="0.8" manaCost="0" manaRequired="0" maxDistance="0.001" minDistance="0.001" numShots="1" offsetAngle="270" proc="1" type="0x45d2" requiredConditions="Invisible">BulletCreate</OnPlayerShootActivate>
+      <OnPlayerShootActivate gapTiles="0" numShots="1" targetMouse="true" cooldown="0.8" manaCost="0" manaRequired="0" maxDistance="0.001" minDistance="0.001" offsetAngle="270" proc="1" type="0x45cf" requiredConditions="Invisible">BulletCreate</OnPlayerShootActivate>
+      <OnPlayerShootActivate targetMouse="true" cooldown="0.8" manaCost="0" manaRequired="0" maxDistance="0.001" minDistance="0.001" numShots="1" offsetAngle="270" proc="1" type="0x45d2" requiredConditions="Invisible">BulletCreate</OnPlayerShootActivate>
+      <OnPlayerShootActivate gapTiles="0" numShots="1" targetMouse="true" cooldown="0.8" manaCost="0" manaRequired="0" maxDistance="0.001" minDistance="0.001" offsetAngle="270" proc="1" type="0x45d0" requiredConditions="Invisible">BulletCreate</OnPlayerShootActivate>
+      <OnPlayerShootActivate targetMouse="true" cooldown="0.8" manaCost="0" manaRequired="0" maxDistance="0.001" minDistance="0.001" numShots="1" offsetAngle="270" proc="1" type="0x45d2" requiredConditions="Invisible">BulletCreate</OnPlayerShootActivate>
+      <OnPlayerShootActivate gapTiles="0" numShots="1" targetMouse="true" cooldown="0.8" manaCost="0" manaRequired="0" maxDistance="0.001" minDistance="0.001" offsetAngle="270" proc="1" type="0x45d1" requiredConditions="Invisible">BulletCreate</OnPlayerShootActivate>
+      <OnPlayerShootActivate targetMouse="true" cooldown="0.8" manaCost="0" manaRequired="0" maxDistance="0.001" minDistance="0.001" numShots="1" offsetAngle="270" proc="1" type="0x45d2" requiredConditions="Invisible">BulletCreate</OnPlayerShootActivate>
+   </Object>
+   <Object id="2RogueST1" type="0x45d9" setName="Vampire Rogue Set" setType="0x45e0">
+      <DisplayId>Vampiric Cape</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x611</Index>
+      </Texture>
+      <SlotType>13</SlotType>
+      <Description>A dark and flowing cape donned by masters of the twilight hours.</Description>
+      <BagType>8</BagType>
+      <FameBonus>5</FameBonus>
+      <MpCost>120</MpCost>
+      <Cooldown>5.5</Cooldown>
+      <feedPower>950</feedPower>
+      <Soulbound/>
+      <ExtraTooltipData>
+         <EffectInfo description="+10 DEX on ability use for 4 seconds" name="With Soulcursed Scythe"/>
+      </ExtraTooltipData>
+      <Usable/>
+      <ActivateOnEquip amount="5" stat="22">IncrementStat</ActivateOnEquip>
+      <Activate duration="4" effect="Invisible">ConditionEffectSelf</Activate>
+      <OnPlayerAbilityActivate amount="10" mustWear="0x45cc" color="-1" cooldown="0.6" duration="4" noStack="true" proc="1" stat="28">StatBoostSelf</OnPlayerAbilityActivate>
+   </Object>
+   <Object id="2RogueST2" type="0x45dd" setName="Vampire Rogue Set" setType="0x45e0">
+      <DisplayId>Hallowed Hide</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <Description>The hide of a false creature given sentience by profane life-twisting magic, forever cursed as an affront to the laws of mortal life.</Description>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x612</Index>
+      </Texture>
+      <SlotType>6</SlotType>
+      <ExtraTooltipData>
+         <EffectInfo description="Healing on self for 5 seconds when hit below 50% max HP" name="With Ruthven's Rosary"/>
+      </ExtraTooltipData>
+      <ActivateOnEquip amount="15" stat="21">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip amount="5" stat="20">IncrementStat</ActivateOnEquip>
+      <BagType>8</BagType>
+      <FameBonus>4</FameBonus>
+      <feedPower>750</feedPower>
+      <Soulbound/>
+      <OnPlayerHitActivate proc="1" mustWear="0x45de" effect="Healing" cooldown="15" duration="5" hpMinThresholdRelative="0.5">ConditionEffectSelf</OnPlayerHitActivate>
+   </Object>
+   <Object id="2RogueST3" type="0x45de" setName="Vampire Rogue Set" setType="0x45e0">
+      <DisplayId>Ruthven's Rosary</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x613</Index>
+      </Texture>
+      <SlotType>9</SlotType>
+      <Description>A ruby-beaded necklace, carried by the cadaverous followers of Lord Ruthven.</Description>
+      <ActivateOnEquip amount="80" stat="0">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip amount="5" stat="27">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip amount="5" stat="26">IncrementStat</ActivateOnEquip>
+      <BagType>8</BagType>
+      <feedPower>550</feedPower>
+      <FameBonus>4</FameBonus>
+      <Soulbound/>
+   </Object>
+   <Object id="2ArcherST0" type="0x52c6" setName="Treasure Hunter Archer Set" setType="0x5211">
+      <DisplayId>Resplendent Bow</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x5f5</Index>
+      </Texture>
+      <SlotType>3</SlotType>
+      <Description>I courageously descended into the ruins, only to be bombarded with cactus spines as sharp as arrows.</Description>
+      <ExtraTooltipData>
+         <EffectInfo description="-10 DEX for 4 seconds" name="On taking at least 20 damage"/>
+         <EffectInfo description="2 seconds" name="Cooldown"/>
+      </ExtraTooltipData>
+      <RateOfFire>0.35</RateOfFire>
+      <OldSound>arrowShoot</OldSound>
+      <OnPlayerHitActivate damageThreshold="20" amount="-10" noStack="true" color="0xffd438" cooldown="2" duration="4" proc="1.0" stat="28">StatBoostSelf</OnPlayerHitActivate>
+      <Projectile>
+         <ObjectId>Resplendent Arrow</ObjectId>
+         <Speed>150</Speed>
+         <MinDamage>200</MinDamage>
+         <MaxDamage>300</MaxDamage>
+         <LifetimeMS>500</LifetimeMS>
+         <Amplitude>0.25</Amplitude>
+         <Frequency>0.75</Frequency>
+         <Size>100</Size>
+         <MultiHit/>
+         <FaceDir/>
+      </Projectile>
+      <NumProjectiles>2</NumProjectiles>
+      <ArcGap>0</ArcGap>
+      <BagType>8</BagType>
+      <FameBonus>5</FameBonus>
+      <feedPower>800</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object id="2ArcherST1" type="0x52c3" setName="Treasure Hunter Archer Set" setType="0x5211">
+      <DisplayId>Embellished Quiver</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x5f6</Index>
+      </Texture>
+      <SlotType>15</SlotType>
+      <Description>After fending off men made of clay, I discovered a lamp that might fetch a considerable sum at the market.</Description>
+      <ExtraTooltipData>
+         <EffectInfo description="Fire 3 projectiles in a line with the closest inflicting Paralyzed and the middle inflicting Slowed" name="Effect"/>
+         <EffectInfo description="Fire an additional two lines of projectiles" name="With Aquamarine Amulet"/>
+         <EffectInfo description="2 seconds" name="Slow Duration"/>
+      </ExtraTooltipData>
+      <Projectile>
+         <ObjectId>Greater Embellished Shard</ObjectId>
+         <Speed>50</Speed>
+         <MinDamage>250</MinDamage>
+         <MaxDamage>250</MaxDamage>
+         <LifetimeMS>800</LifetimeMS>
+         <MultiHit/>
+         <ConditionEffect duration="2">Paralyzed</ConditionEffect>
+         <ArmorPiercing/>
+      </Projectile>
+      <NumProjectiles>0</NumProjectiles>
+      <Activate ignoreOnTooltip="true" cooldown="0.2" gapAngle="0" gapTiles="0" maxDistance="2" minDistance="2" numShots="1" offsetAngle="0">BulletCreate</Activate>
+      <OnPlayerAbilityActivate targetMouse="true" cooldown="0.2" gapAngle="0" gapTiles="0" maxDistance="3" minDistance="3" numShots="1" offsetAngle="0" proc="1" type="0x52c4">BulletCreate</OnPlayerAbilityActivate>
+      <OnPlayerAbilityActivate targetMouse="true" cooldown="0.2" gapAngle="0" gapTiles="0" maxDistance="4" minDistance="4" numShots="1" offsetAngle="0" proc="1" type="0x52c5">BulletCreate</OnPlayerAbilityActivate>
+      <OnPlayerAbilityActivate targetMouse="true" mustWear="0x527c" arcGap="16" cooldown="0.2" gapAngle="0" gapTiles="0" maxDistance="2" minDistance="2" numShots="2" offsetAngle="0" proc="1" type="0x4216">BulletCreate</OnPlayerAbilityActivate>
+      <OnPlayerAbilityActivate targetMouse="true" mustWear="0x527c" arcGap="16" cooldown="0.2" gapAngle="0" gapTiles="0" maxDistance="3" minDistance="3" numShots="2" offsetAngle="0" proc="1" type="0x4217">BulletCreate</OnPlayerAbilityActivate>
+      <OnPlayerAbilityActivate targetMouse="true" mustWear="0x527c" arcGap="16" cooldown="0.2" gapAngle="0" gapTiles="0" maxDistance="4" minDistance="4" numShots="2" offsetAngle="0" proc="1" type="0x4218">BulletCreate</OnPlayerAbilityActivate>
+      <Usable/>
+      <BagType>8</BagType>
+      <FameBonus>5</FameBonus>
+      <MpCost>100</MpCost>
+      <Soulbound/>
+      <feedPower>850</feedPower>
+   </Object>
+   <Object id="2ArcherST2" type="0x52c7" setName="Treasure Hunter Archer Set" setType="0x5211">
+      <Class>Equipment</Class>
+      <Item/>
+      <DisplayId>Ornate Armor</DisplayId>
+      <Description>To my shock, a spirit arose from the lamp and thanked me for freeing him. The Genie would only allow me access to the contents of the lamp if I proved myself against his vast spiritual power.</Description>
+      <ExtraTooltipData>
+         <EffectInfo description="Healing for 5 seconds" name="On taking at least 20 damage"/>
+         <EffectInfo description="20 seconds" name="Cooldown"/>
+      </ExtraTooltipData>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x5f7</Index>
+      </Texture>
+      <OnPlayerHitActivate cooldown="20" damageThreshold="20" duration="5" effect="Healing" proc="1">ConditionEffectSelf</OnPlayerHitActivate>
+      <SlotType>6</SlotType>
+      <ActivateOnEquip amount="15" stat="21">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip amount="10" stat="26">IncrementStat</ActivateOnEquip>
+      <BagType>8</BagType>
+      <FameBonus>4</FameBonus>
+      <feedPower>700</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object id="2ArcherST3" type="0x527c" setName="Treasure Hunter Archer Set" setType="0x5211">
+      <Class>Equipment</Class>
+      <Item/>
+      <DisplayId>Aquamarine Amulet</DisplayId>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x5f8</Index>
+      </Texture>
+      <SlotType>9</SlotType>
+      <Description>Though his magic was strong, my resolve was stronger. The spirit dissipated and all that remained was the treasure within.</Description>
+      <ActivateOnEquip amount="5" stat="21">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip amount="5" stat="26">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip amount="50" stat="0">IncrementStat</ActivateOnEquip>
+      <BagType>8</BagType>
+      <FameBonus>4</FameBonus>
+      <feedPower>600</feedPower>
       <Soulbound/>
    </Object>
 </Objects>

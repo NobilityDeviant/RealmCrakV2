@@ -60,7 +60,7 @@
          <Index>0xf4</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to an Undead Lair.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to an Undead Lair. Septavius, once one of the most prominent combatants to ever live, now takes refuge in these abandoned catacombs.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -77,7 +77,7 @@
          <Index>0xf0</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to a Pirate Cave.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to a Pirate Cave. Dreadstump's personal cove for his ragtag pirate crew reeks of cheap rum.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -94,7 +94,7 @@
          <Index>0xf1</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to a Spider Den.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to a Spider Den. Home of Arachna the Spider Queen, she has gone undisturbed long enough to produce thousands of children.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -111,7 +111,7 @@
          <Index>0xf3</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to an Abyss of Demons.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to an Abyss of Demons. Archdemon Malphas crafted his own fiery abode, which now torments the souls of the wicked.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -128,7 +128,7 @@
          <Index>0xf5</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to a Snake Pit.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to a Snake Pit. Once a temple, these chambers are now overrun by the serpents of Medusa's sister.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -145,7 +145,7 @@
          <Index>0xf6</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to the Tomb of the Ancients.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to the Tomb of the Ancients. Three of the realm's oldest gods lay dormant in this burial chamber, their powers contained by a series of rituals.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -162,7 +162,7 @@
          <Index>0xf6</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to the Tomb of the Ancients (Heroic).\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to the Tomb of the Ancients (Heroic). Three of the realm's oldest gods lay dormant in this burial chamber, their powers contained by a series of rituals.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -179,7 +179,7 @@
          <Index>0xf2</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to a Sprite World.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to a Sprite World. As an entirely different plane of existence, it is meant to safeguard the sprites that watch over the realm's ecosystems.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -196,7 +196,7 @@
          <Index>0x05</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to an Ocean Trench.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to an Ocean Trench. Many sailors met their ends in these waters from the deceptive songs of mermaids.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -213,7 +213,7 @@
          <Index>0x427</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Enter this destroyed Nexus at your own peril.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>Enter this destroyed Nexus at your own peril. This legendary attack on the Nexus itself is locked in history forevermore.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -230,7 +230,7 @@
          <Index>0x18</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens a passage to the Forbidden Jungle.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens a passage to the Forbidden Jungle. Pagan acolytes of Mixcoatl are exiled to these uncharted woods, said to be cursed by black magic.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -247,7 +247,7 @@
          <Index>0x54E</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>It's cold in here.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens a passage to the Ice Cave. Glaciers formed many eons ago became the residence of migrating yetis and a mysterious hermit of a man.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -300,7 +300,7 @@
          <Index>0x29</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens a passage to the Manor of the Immortals.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens a passage to the Manor of the Immortals. Lord Ruthven's gothic mansion neighbor's Oryx's own castle in the dark, distant sea.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -317,7 +317,7 @@
          <Index>0x109</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key that opens the way to Davy Jones' Locker.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key that opens the way to Davy Jones' Locker. No crew members bailed from Davy's ghost ship, trapping their souls in the vessel beneath the waves.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -334,7 +334,7 @@
          <Index>0x177</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens a portal to the Beachzone.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens a portal to the Beachzone. It's the most exclusive seaside resort in the realm!\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -351,7 +351,7 @@
          <Index>0x1b3</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which reveals the way to the Mad Lab.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which reveals the way to the Mad Lab. The grotesque beings inside have been produced by some sort of undiscovered alchemy methods.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -368,7 +368,7 @@
          <Index>0x28d</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens the way to the Candyland Hunting Grounds.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens the way to the Candyland Hunting Grounds. Among the most perplexing locations in the realm, this populated land is filled to the brim with sweets.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -437,7 +437,7 @@
          <Index>0x3de</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to the Forest Maze.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to the Forest Maze. The dense layers of trees host a dusty menace.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -454,7 +454,7 @@
          <Index>0x3e6</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to the Woodland Labyrinth.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to the Woodland Labyrinth. An unprecedented metamorphosis of moths has taken form in the heart of the forest.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -471,7 +471,7 @@
          <Index>0x3eb</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to Deadwater Docks.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to Deadwater Docks. In contrast to his rival, Dreadstump, Jon Bilgewater's crew made their hideout deeper inland at the belly of a peninsula. It still reeks of cheap rum, though.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -488,7 +488,7 @@
          <Index>0x3e9</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to The Crawling Depths.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to The Crawling Depths. Arachna's lone son made a den of his own to wage war on his mother.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -505,7 +505,7 @@
          <Index>43</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to The Shatters.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to The Shatters. The gloomy and abandoned ruins, enveloped by twilight, are now the shelter of the shadows.  Once a legendary kingdom, its walls are broken, its dwellers are forgotten.  No living souls have entered these grounds, no noble creatures have stepped into it.  The immense kingdom has fallen, its sentinels have turned to dust.  No one remembers its name, and no one will.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -523,8 +523,7 @@
          <Index>0x0f</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>
-			A key which opens a portal to The Machine. Accessing the rift to this hidden dimension may have severe consequences.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n Lead: Toastrz\n Art: Aurum, Kith, Lily, Piggby,\n TLMaelstrom, Trensient, Wunderwafe
+      <Description>A key which opens a portal to The Machine. Accessing the rift to this hidden dimension may have severe consequences.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n Lead: Toastrz\n Art: Aurum, Kith, Lily, Piggby,\n TLMaelstrom, Trensient, Wunderwafe
 		</Description>
       <Sound>use_key</Sound>
       <Soulbound/>
@@ -542,7 +541,7 @@
          <Index>0x5f1</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to Belladonna's Garden.\n\nKeys can only be used once you have 10 or more stars! \n\nDungeon credits:\n Art: TLMaelstrom</Description>
+      <Description>A key which opens an entrance to Belladonna's Garden. Formerly the property of a caretaker, Belladonna claimed these grounds and seized control of the roots within.\n\nKeys can only be used once you have 10 or more stars! \n\nDungeon credits:\n Art: TLMaelstrom</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -559,7 +558,7 @@
          <Index>0x4BC</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A molten Key that links directly to the Lair of Shaitan, Advisor to Oryx.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n Lead: Kingged\n Special Thanks: Toastrz, Tuvior, Artauris</Description>
+      <Description>A molten key that links directly to the Lair of Shaitan. Oryx's unstable advisor dwells near the unbearably hot core of the realm.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n Lead: Kingged\n Special Thanks: Toastrz, Tuvior, Artauris</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -576,7 +575,7 @@
          <Index>0x4FF</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to the Puppet Master's Theatre.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to the Puppet Master's Theatre. This demented stage is the work of a crazed puppeteer, obsessed with his creations to the point of enchanting them with life.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -593,29 +592,11 @@
          <Index>0x1b</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to the Puppet Master's Encore.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to the Puppet Master's Encore. The confines of this workshop are where the most powerful souls are bonded to puppets.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
       <Activate id="Puppet Encore Portal">CreatePortal</Activate>
-      <feedPower>200</feedPower>
-      <BagType>7</BagType>
-      <Track/>
-   </Object>
-   <Object type="0x716b" id="Dank Sewer Key">
-      <Class>Equipment</Class>
-      <Item/>
-      <DisplayId>Dank Sewer Key</DisplayId>
-      <Texture>
-         <File>lofiObj3</File>
-         <Index>0x56d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to the Dank Sewer.\n\nKeys can only be used once you have 10 or more stars!</Description>
-      <Sound>use_key</Sound>
-      <Consumable/>
-      <Soulbound/>
-      <Activate id="Dank Sewer Portal">CreatePortal</Activate>
       <feedPower>200</feedPower>
       <BagType>7</BagType>
       <Track/>
@@ -629,7 +610,7 @@
          <Index>0x56d</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to the Toxic Sewers.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n Lead: Kiddforce\n Design: ViciousTwo\n Art: Phophull, Kingged</Description>
+      <Description>A key which opens an entrance to the Toxic Sewers. Going without proper maintenance for centuries, some of the most wretched monsters have taken these tunnels as their own.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n Lead: Kiddforce\n Design: ViciousTwo\n Art: Phophull, Kingged</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -647,7 +628,7 @@
          <Index>0x58b</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to The Hive.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n Lead: ViciousTwo\n Art: Phophull\n Special Thanks: Toastrz</Description>
+      <Description>A key which opens an entrance to The Hive. This severely enlarged beehive is allegedly the result of an unknown experiment.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n Lead: ViciousTwo\n Art: Phophull\n Special Thanks: Toastrz</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -773,7 +754,7 @@
          <Index>0x08</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to Ice Tomb.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to Ice Tomb. When the glaciers of the Ice Cave formed, the spirits of three demigods were trapped together in a cavity within the ice.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -790,7 +771,7 @@
          <Index>0x20e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A map that reveals the way to hidden treasure.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A map that reveals the way to hidden treasure. Crafty bandits developed lethal booby traps to scare off those who would plunder their hoard.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -808,7 +789,7 @@
          <Index>0xcb</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to The Mountain Temple. \n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n Art: Beige</Description>
+      <Description>A key which opens an entrance to the Mountain Temple. Steep, distant cliffs conceal a clan of demon-worshipping monks.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n Art: Beige</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -820,13 +801,13 @@
    <Object type="0x6fe5" id="Daichi Key">
       <Class>Equipment</Class>
       <Item/>
-      <DisplayId>Daichi key</DisplayId>
+      <DisplayId>Daichi Key</DisplayId>
       <Texture>
          <File>mountainTempleObjects8x8</File>
          <Index>0xcb</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to The Mountain Temple.</Description>
+      <Description>A key which opens an entrance to the Mountain Temple. Steep, distant cliffs conceal a clan of demon-worshipping monks.</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -843,7 +824,7 @@
          <Index>0x07</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Treasures await at the end of the rainbow.</Description>
+      <Description>A key which reveals the way to Rainbow Road. Treasures await at the end of the rainbow.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -947,7 +928,7 @@
          <Index>0x00</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to the Parasite Chambers. \n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to the Parasite Chambers. Some of the realm's most foul and horrific creatures make their home in these chambers.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -983,7 +964,7 @@
          <Index>0x02</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to the Santa's Workshop. It's a solo dungeon, so the key can be used only in your vault! \n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n  Lead: Silex\n  Design: Lovens </Description>
+      <Description>A key which opens an entrance to the Santa's Workshop. Craig, Intern of the Mad God stores an array of goodies in this festive building. This solo dungeon can be opened only in your vault! \n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n  Lead: Silex\n  Design: Lovens </Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -1018,7 +999,7 @@
          <Index>0x07</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens a passage to the Cnidarian Reef. Oryx's Master of the Depths awaits mortals foolish enough to stumble upon its lair in the depths of the ocean.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n  Lead: Atrapper\n  Art: Phops\n  Special Thanks: Krathan, Kiddforce</Description>
+      <Description>A key which opens a passage to the Cnidarian Reef. Oryx's Master of the Depths awaits mortals foolish enough to stumble upon its lair in the deep reaches of the ocean.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n  Lead: Atrapper\n  Art: Phops\n  Special Thanks: Krathan, Kiddforce</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -1036,7 +1017,7 @@
          <Index>0xc3</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to The Mad God Mayhem event.</Description>
+      <Description>A key which opens an entrance to the Mad God Mayhem event.</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -1071,7 +1052,7 @@
          <Index>0xe9</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to an Abyss of Demons.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to a Heroic Abyss of Demons.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -1106,8 +1087,7 @@
          <Index>0x6a</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>
-		A key which opens an entrance to the Cursed Library. Once a great hub of knowledge, these forsaken archives now hold something far more sinister.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n Lead: Toastrz\n Art: Beige, Piggby, Trensient, Aurum\n Special Thanks: Dappertron, Mrunibro,\n Kiddforce, Tuvior
+      <Description>A key which opens an entrance to the Cursed Library. Once a great hub of knowledge, these forsaken archives now hold something far more sinister.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n Lead: Toastrz\n Art: Beige, Piggby, Trensient, Aurum\n Special Thanks: Dappertron, Mrunibro,\n Kiddforce, Tuvior
 		</Description>
       <Sound>use_key</Sound>
       <Soulbound/>
@@ -1214,7 +1194,7 @@
          <Index>0x04</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to the Fungal Cavern, a forgotten mine taken over by mushroom tribes over the years. \n\nKeys can only be used once you have 10 or more stars! \n\nDungeon credits:\n Art: Aurum, Trensient</Description>
+      <Description>A key which opens an entrance to the Fungal Cavern. This forgotten mine has been taken over by mushroom tribes over the years.\n\nKeys can only be used once you have 10 or more stars! \n\nDungeon credits:\n Art: Aurum, Trensient</Description>
       <Sound>use_key</Sound>
       <Soulbound/>
       <feedPower>200</feedPower>
@@ -1231,7 +1211,7 @@
          <Index>0x1e7</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to the Fungal Cavern, a forgotten mine taken over by mushroom tribes over the years. \n\nKeys can only be used once you have 10 or more stars! \n\nDungeon credits:\n Art: Aurum, Trensient</Description>
+      <Description>A key which opens an entrance to the Fungal Cavern. This forgotten mine has been taken over by mushroom tribes over the years.\n\nKeys can only be used once you have 10 or more stars! \n\nDungeon credits:\n Art: Aurum, Trensient</Description>
       <ExtraTooltipData>
          <EffectInfo name="Guild Key" description="This key can only be used in the Guild Hall. Once used, a chest with rewards will spawn for all players in the Guild Hall."/>
       </ExtraTooltipData>
@@ -1252,7 +1232,7 @@
          <Index>0x1e8</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to the Tomb of the Ancients.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to the Tomb of the Ancients. Three of the realm's oldest gods lay dormant in this burial chamber, their powers contained by a series of rituals.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <ExtraTooltipData>
          <EffectInfo name="Guild Key" description="This key can only be used in the Guild Hall. Once used, a chest with rewards will spawn for all players in the Guild Hall."/>
       </ExtraTooltipData>
@@ -1315,7 +1295,7 @@
          <Index>0x1d6</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to an Ocean Trench.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to an Ocean Trench. Many sailors met their ends in these waters from the deceptive songs of mermaids.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <ExtraTooltipData>
          <EffectInfo name="Guild Key" description="This key can only be used in the Guild Hall. Once used, a chest with rewards will spawn for all players in the Guild Hall."/>
       </ExtraTooltipData>
@@ -1379,7 +1359,7 @@
          <Index>0x1d9</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to The Shatters.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to The Shatters. The gloomy and abandoned ruins, enveloped by twilight, are now the shelter of the shadows.  Once a legendary kingdom, its walls are broken, its dwellers are forgotten.  No living souls have entered these grounds, no noble creatures have stepped into it.  The immense kingdom has fallen, its sentinels have turned to dust.  No one remembers its name, and no one will.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <ExtraTooltipData>
          <EffectInfo name="Guild Key" description="This key can only be used in the Guild Hall. Once used, a chest with rewards will spawn for all players in the Guild Hall."/>
       </ExtraTooltipData>
@@ -1401,7 +1381,7 @@
          <Index>0x1da</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to The Mountain Temple. \n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n Art: Beige</Description>
+      <Description>A key which opens an entrance to the Mountain Temple. Steep, distant cliffs conceal a clan of demon-worshipping monks.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n Art: Beige</Description>
       <ExtraTooltipData>
          <EffectInfo name="Guild Key" description="This key can only be used in the Guild Hall. Once used, a chest with rewards will spawn for all players in the Guild Hall."/>
       </ExtraTooltipData>
@@ -1445,7 +1425,7 @@
          <Index>0x1cf</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to the Parasite Chambers. \n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to the Parasite Chambers. Some of the realm's most foul and horrific creatures make their home in these chambers.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <ExtraTooltipData>
          <EffectInfo name="Guild Key" description="This key can only be used in the Guild Hall. Once used, a chest with rewards will spawn for all players in the Guild Hall."/>
       </ExtraTooltipData>
@@ -1466,7 +1446,7 @@
          <Index>0x1f4</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to an Ocean Trench.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Wawawa</Description>
+      <Description>A key which opens an entrance to an Ocean Trench. Many sailors met their ends in these waters from the deceptive songs of mermaids.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Wawawa</Description>
       <ExtraTooltipData>
          <EffectInfo name="Enchanted Key" description="Once used, the owner will receive a Mystery ST Crate!"/>
       </ExtraTooltipData>
@@ -1487,7 +1467,7 @@
          <Index>0x1f5</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to The Crawling Depths.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Wawawa</Description>
+      <Description>A key which opens an entrance to The Crawling Depths.  Arachna's lone son made a den of his own to wage war on his mother.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Wawawa</Description>
       <ExtraTooltipData>
          <EffectInfo name="Enchanted Key" description="Once used, the owner will receive a Mystery ST Crate!"/>
       </ExtraTooltipData>
@@ -1508,7 +1488,7 @@
          <Index>0x1f6</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to Deadwater Docks.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Wawawa</Description>
+      <Description>A key which opens an entrance to Deadwater Docks. In contrast to his rival, Dreadstump, Jon Bilgewater's crew made their hideout deeper inland at the belly of a peninsula. It still reeks of cheap rum, though.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Wawawa</Description>
       <ExtraTooltipData>
          <EffectInfo name="Enchanted Key" description="Once used, the owner will receive a Mystery ST Crate!"/>
       </ExtraTooltipData>
@@ -1529,7 +1509,7 @@
          <Index>0x1f7</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to the Woodland Labyrinth.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Wawawa</Description>
+      <Description>A key which opens an entrance to the Woodland Labyrinth. An unprecedented metamorphosis of moths has taken form in the heart of the forest.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Wawawa</Description>
       <ExtraTooltipData>
          <EffectInfo name="Enchanted Key" description="Once used, the owner will receive a Mystery ST Crate!"/>
       </ExtraTooltipData>
@@ -1588,13 +1568,12 @@
    <Object type="0x6583" id="Fungal Cavern Enchanted Key">
       <Class>Equipment</Class>
       <Item/>
-      <DisplayId>Fungal Cavern Key</DisplayId>
       <Texture>
          <File>d2LofiObjEmbed</File>
          <Index>0x1fa</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to the Fungal Cavern, a forgotten mine taken over by mushroom tribes over the years. \n\nKeys can only be used once you have 10 or more stars! \n\nDungeon credits:\n Art: Aurum, Trensient\n\nSprite Credits: Wawawa</Description>
+      <Description>A key which opens an entrance to the Fungal Cavern. This forgotten mine has been taken over by mushroom tribes over the years.\n\nKeys can only be used once you have 10 or more stars! \n\nDungeon credits:\n Art: Aurum, Trensient\n\nSprite Credits: Wawawa</Description>
       <ExtraTooltipData>
          <EffectInfo name="Enchanted Key" description="Once used, the owner will receive a Mystery ST Crate!"/>
       </ExtraTooltipData>
@@ -1615,7 +1594,7 @@
          <Index>0x1fb</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>It's cold in here.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Wawawa</Description>
+      <Description>A key which opens a passage to the Ice Cave. Glaciers formed many eons ago became the residence of migrating yetis and a mysterious hermit of a man.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Wawawa</Description>
       <ExtraTooltipData>
          <EffectInfo name="Enchanted Key" description="Once used, the owner will receive a Mystery ST Crate!"/>
       </ExtraTooltipData>
@@ -1658,7 +1637,7 @@
          <Index>0x1fd</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to the Tomb of the Ancients.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Lily</Description>
+      <Description>A key which opens an entrance to the Tomb of the Ancients. Three of the realm's oldest gods lay dormant in this burial chamber, their powers contained by a series of rituals.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Lily</Description>
       <ExtraTooltipData>
          <EffectInfo name="Enchanted Key" description="Once used, the owner will receive a Mystery ST Crate!"/>
       </ExtraTooltipData>
@@ -1701,7 +1680,7 @@
          <Index>0x220</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key that opens the way to Davy Jones' Locker.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Lily</Description>
+      <Description>A key that opens the way to Davy Jones' Locker.  No crew members bailed from Davy's ghost ship, trapping their souls in the vessel beneath the waves.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Lily</Description>
       <ExtraTooltipData>
          <EffectInfo name="Enchanted Key" description="Once used, the owner will receive a Mystery ST Crate!"/>
       </ExtraTooltipData>
@@ -1722,7 +1701,7 @@
          <Index>0x221</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to The Mountain Temple. \n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n Art: Beige\n\nSprite Credits: Lily</Description>
+      <Description>A key which opens an entrance to the Mountain Temple. Steep, distant cliffs conceal a clan of demon-worshipping monks.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n Art: Beige\n\nSprite Credits: Lily</Description>
       <ExtraTooltipData>
          <EffectInfo name="Enchanted Key" description="Once used, the owner will receive a Mystery ST Crate!"/>
       </ExtraTooltipData>
@@ -1824,11 +1803,11 @@
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>innerWorkingsObjects8x8</File>
-         <Index>0x01</Index>
+         <File>theMachineObjects8x8</File>
+         <Index>0x1f</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>placeholder description</Description>
+      <Description>A key which opens a portal to The Inner Workings. This secretive dimension creates far more questions than answers.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n Lead: Mrunibro</Description>
       <Sound>use_key</Sound>
       <Soulbound/>
       <feedPower>200</feedPower>
@@ -1845,7 +1824,7 @@
          <Index>0x235</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to an Abyss of Demons.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to an Abyss of Demons. Archdemon Malphas crafted his own fiery abode, which now torments the souls of the wicked.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <ExtraTooltipData>
          <EffectInfo name="Competition Key" description="This key can only be used in the Vault."/>
       </ExtraTooltipData>
@@ -1865,7 +1844,7 @@
          <Index>0x237</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to a Snake Pit.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Lily</Description>
+      <Description>A key which opens an entrance to a Snake Pit. Once a temple, these chambers are now overrun by the serpents of Medusa's sister.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Lily</Description>
       <ExtraTooltipData>
          <EffectInfo name="Enchanted Key" description="Once used, the owner will receive a Mystery ST Crate!"/>
       </ExtraTooltipData>
@@ -1886,7 +1865,7 @@
          <Index>0x238</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A molten Key that links directly to the Lair of Shaitan, Advisor to Oryx.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n Lead: Kingged\n Special Thanks: Toastrz, Tuvior, Artauris\n\nSprite Credits: Lily</Description>
+      <Description>A molten key that links directly to the Lair of Shaitan. Oryx's unstable advisor dwells near the unbearably hot core of the realm.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n Lead: Kingged\n Special Thanks: Toastrz, Tuvior, Artauris\n\nSprite Credits: Lily</Description>
       <ExtraTooltipData>
          <EffectInfo name="Enchanted Key" description="Once used, the owner will receive a Mystery ST Crate!"/>
       </ExtraTooltipData>
@@ -1907,7 +1886,7 @@
          <Index>0x239</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to the Puppet Master's Encore.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Lily</Description>
+      <Description>A key which opens an entrance to the Puppet Master's Encore. The confines of this workshop are where the most powerful souls are bonded to puppets.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Lily</Description>
       <ExtraTooltipData>
          <EffectInfo name="Enchanted Key" description="Once used, the owner will receive a Mystery ST Crate!"/>
       </ExtraTooltipData>
@@ -1971,7 +1950,7 @@
          <Index>0x23c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to The Shatters.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Lily</Description>
+      <Description>A key which opens an entrance to The Shatters. The gloomy and abandoned ruins, enveloped by twilight, are now the shelter of the shadows.  Once a legendary kingdom, its walls are broken, its dwellers are forgotten.  No living souls have entered these grounds, no noble creatures have stepped into it.  The immense kingdom has fallen, its sentinels have turned to dust.  No one remembers its name, and no one will.\n\nKeys can only be used once you have 10 or more stars!\n\nSprite Credits: Lily</Description>
       <ExtraTooltipData>
          <EffectInfo name="Enchanted Key" description="Once used, the owner will receive a Mystery ST Crate!"/>
       </ExtraTooltipData>
@@ -1982,6 +1961,23 @@
       <Activate id="Mystery ST Crate">Exchange</Activate>
       <feedPower>200</feedPower>
       <BagType>7</BagType>
+      <Track/>
+   </Object>
+   <Object type="0x25ba" id="Ancient Ruins Key">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>ancientRuinsObjects8x8</File>
+         <Index>0x0f</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A key which opens the way to the Ancient Ruins. What was once an ancient shrine linked to the world of spirits is now a desolate ruin.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n  Lead: Sturky\n  Art: Aurum, Bonk, Lily, Piggby,\n  TLMaelstrom, and Trensient\n  Special Thanks: Atrapper and\n  Stellalumi</Description>
+      <Sound>use_key</Sound>
+      <Soulbound/>
+      <Consumable/>
+      <feedPower>200</feedPower>
+      <BagType>7</BagType>
+      <Activate id="Ancient Ruins Portal">CreatePortal</Activate>
       <Track/>
    </Object>
 </Objects>

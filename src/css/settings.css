@@ -1,0 +1,147 @@
+.check-box {
+	-fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+}
+
+.check-box .box {
+	-fx-background-color: white;
+	-fx-border-color:grey;
+	-fx-border-radius:3px; 
+}
+
+.check-box:selected .mark {
+	-fx-background-color: white;
+}
+
+.check-box:selected .box {
+	-fx-background-color: #2a37d4;
+}
+
+.combo-box-base {
+  -fx-background-color: #2a37d4;
+  -fx-mark-color: white; // arrow color
+  -fx-text-fill: white;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #1d2696;
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: #1d2696;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected {
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover{
+    -fx-background-color: #2733c4;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color: #3543f0;
+    -fx-text-fill: white;
+}
+
+.color-picker {
+    -fx-background-color: #2a37d4;
+    -fx-mark-color: white; // arrow color
+}
+
+.color-picker .color-picker-label {
+    -fx-text-fill: white
+}
+
+// Background color of the control itself
+.choice-box {
+  -fx-background-color: #2a37d4;
+  -fx-mark-color: white; // arrow color
+}
+
+// Selected item text color on the control itself
+.choice-box > .label { -fx-text-fill: white; }
+
+// Background color of the whole context menu
+.choice-box .context-menu { -fx-background-color: #1d2696; }
+// Focused item background color in the list
+.choice-box .menu-item:focused { -fx-background-color: #1524d6; }
+// Text color of non-focused items in the list
+.choice-box .menu-item > .label { -fx-text-fill: white; }
+// Text color of focused item in the list
+.choice-box .menu-item:focused > .label { -fx-text-fill: white; }
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #05071F;
+}
+
+.text-field {
+    -fx-background-color: #2a37d4;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+
+.table-view {
+   -fx-background-color: transparent;
+}
+
+.table-view:focused {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(#05071F 10%,  #05071F 80%);
+}
+
+.table-view .column-header-background .label {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: white;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #597bb3;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #597bb3;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #005797;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background,
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button,
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="532.0" prefWidth="412.0" style="-fx-background-color: #05071F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nobility.ItemSearchController">
+    <TableView fx:id="main_table" VBox.vgrow="ALWAYS">
+      <columns>
+          <TableColumn fx:id="id_column" editable="false" minWidth="-1.0" prefWidth="92.0" text="ID" />
+          <TableColumn fx:id="name_column" editable="false" prefWidth="148.0" text="Name" />
+          <TableColumn fx:id="on_column" editable="false" prefWidth="40.0" text="On" />
+          <TableColumn fx:id="amount_column" editable="false" sortable="false" text="Amount" />
+      </columns>
+        <columnResizePolicy>
+          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+        </columnResizePolicy>
+      <stylesheets>
+         <URL value="@../css/tableview.css" />
+         <URL value="@../css/scroll.css" />
+      </stylesheets>
+    </TableView>
+    <TextField fx:id="search_field" promptText="Search By ID Or Name" stylesheets="@../css/settings.css" VBox.vgrow="ALWAYS">
+      <VBox.margin>
+         <Insets top="2.0" />
+      </VBox.margin></TextField>
+</VBox>

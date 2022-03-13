@@ -7,22 +7,92 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9455040-1ebf-402b-aa41-7aed8e495357" name="Default Changelist" comment="Oops! Removed a little boolean i used to prevent running the checker if not logged in.">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Realmcrak_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/RealmCrak_V2_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fx/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/RealmCrak_V2_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/RealmCrak_V2_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/libs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/mysql-connector-java-8.0.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Equip.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Equip.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/EquipEggs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/EquipEggs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/EquipKeys.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/EquipKeys.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/EquipSkins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/EquipSkins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/combos.nobi" beforeDir="false" afterPath="$PROJECT_DIR$/resources/combos.nobi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/proxychecker.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/proxychecker.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/save.nobi" beforeDir="false" afterPath="$PROJECT_DIR$/resources/save.nobi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/ConfirmController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/Cycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/Cycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/Home.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/ItemSearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/ItemSearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/LoginController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nobility/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/Settings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fx/proxy-settings.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/ProxySettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/UpdateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/UpdateManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/checker.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/checker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/confirm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/font.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/font.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/itemsearch.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fx/item-search.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/menu-selected.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/menu-selected.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/menubutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/menubutton.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nobility/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nobility/moduleshandler/ModuleHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/moduleshandler/ModuleHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/moduleshandler/ModuleHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/handler/ModuleHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/moduleshandler/modules/Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/handler/modules/Module.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/moduleshandler/modules/hits/Hit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/handler/modules/hits/Hit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/moduleshandler/modules/hits/HitsExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/handler/modules/hits/HitsExporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/moduleshandler/modules/rotmg/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/handler/modules/rotmg/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/moduleshandler/modules/rotmg/ItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/handler/modules/rotmg/ItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/moduleshandler/modules/rotmg/RealmOfTheMadGodCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/handler/modules/rotmg/RealmOfTheMadGodCore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/moduleshandler/modules/rotmg/RealmOfTheMadGodCycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/handler/modules/rotmg/RealmOfTheMadGodCycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/moduleshandler/modules/rotmg/RealmOfTheMadGodModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/handler/modules/rotmg/RealmOfTheMadGodModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/moduleshandler/modules/rotmg/RotmgData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/handler/modules/rotmg/RotmgData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/moduleshandler/settings/Collects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/handler/settings/Collects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/moduleshandler/settings/ComboContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/handler/settings/ComboContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/moduleshandler/settings/ProxyContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/handler/settings/ProxyContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/moduleshandler/settings/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/handler/settings/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/proxy/AlertBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/tools/Alerter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/proxy/ProxyChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/proxy/ProxyChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/proxy/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/proxy/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/proxy/commands/ExportCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/proxy/commands/ExportCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/proxy/commands/LoadCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/proxy/commands/LoadCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/proxy/components/ProxySettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/proxy/components/ProxySettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/proxy/events/ProxyCheckerKeyEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/proxy/events/ProxyCheckerKeyEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/proxyicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/save/Database.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/save/DatabaseMessages.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/settings.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/tableview.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/tableview.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nobility/tools/Tools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nobility/tools/Tools.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/nobility/handler/ModuleHandler.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/nobility/Controller.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/nobility/Main.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="1zqBZOJCcT5W7Cs7TSh5ZmqqZDO" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -31,10 +101,25 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/oshi-core-5.8.3.jar" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/FXTrayIcon-3.0.0.jar" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Java Projects\New Realmcrak\src\css" />
+      <recent name="E:\Java Projects\New Realmcrak\src\nobility\css" />
+      <recent name="E:\Java Projects\New Realmcrak\src\nobility" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Java Projects\New Realmcrak\src\fx" />
+      <recent name="E:\Java Projects\New Realmcrak\src\images" />
+      <recent name="E:\Java Projects\New Realmcrak\src\css" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="nobility.tools" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -66,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634867657408</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Oops! Removed a little boolean i used to prevent running the checker if not logged in.">
+      <created>1635916485404</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1635916485404</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

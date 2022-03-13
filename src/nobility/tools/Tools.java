@@ -1,8 +1,11 @@
 package nobility.tools;
 
+import java.text.DecimalFormat;
 import java.util.Calendar;
 
 public class Tools {
+
+    public static final DecimalFormat percentFormat = new DecimalFormat("#.###%");
 
     public static String getDateForFolder() {
         Calendar c = Calendar.getInstance();

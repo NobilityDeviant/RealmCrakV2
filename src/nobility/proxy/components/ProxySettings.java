@@ -2,7 +2,6 @@ package nobility.proxy.components;
 
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
-import nobility.Controller;
 
 import java.io.File;
 import java.io.FileReader;
@@ -14,10 +13,6 @@ import java.io.IOException;
  * Manages Application settings and configuration files and directory
  */
 public class ProxySettings {
-
-    public static String getApplicationName() {
-        return "Proxy Checker v1.2";
-    }
 
     private static final String saveFile =  "proxychecker.json";
 

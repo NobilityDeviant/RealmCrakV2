@@ -1,0 +1,25 @@
+.button {
+    -fx-background-color : #05071F;
+    -fx-text-fill : #e7e5e5;
+    -fx-border-color: white;
+    -fx-border-radius: 1px;
+}
+.button:hover {
+    -fx-background-color : #10165F;
+}
+.button:pressed {
+    -fx-background-color : #1620A1;
+}
+
+HBox {
+	-fx-border-color: white;
+	-fx-border-radius: 2px;
+}
+
+.slider .track {
+    -fx-background-color: #313ede;
+}
+
+.slider .thumb {
+     -fx-background-color: #96c1ff;
+}

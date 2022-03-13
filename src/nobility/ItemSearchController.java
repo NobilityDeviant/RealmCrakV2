@@ -9,8 +9,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.TableColumn.SortType;
-import nobility.moduleshandler.modules.rotmg.Item;
-import nobility.moduleshandler.modules.rotmg.ItemParser;
+import javafx.stage.Stage;
+import nobility.handler.modules.rotmg.Item;
+import nobility.handler.modules.rotmg.ItemParser;
 
 import java.net.URL;
 import java.util.Comparator;
@@ -26,49 +27,53 @@ public class ItemSearchController implements Initializable {
     @FXML private TextField search_field;
     @FXML private TableView<Item> main_table;
     //don't make these final
-    @FXML private TableColumn<Item, Label> main_column1 = new TableColumn<>();
-    @FXML private TableColumn<Item, Label> main_column2 = new TableColumn<>();
-    @FXML private TableColumn<Item, CheckBox> main_column3 = new TableColumn<>();
-    @FXML private TableColumn<Item, TextField> main_column4 = new TableColumn<>();
+    @FXML protected TableColumn<Item, Label> id_column = new TableColumn<>();
+    @FXML protected TableColumn<Item, Label> name_column = new TableColumn<>();
+    @FXML protected TableColumn<Item, CheckBox> on_column = new TableColumn<>();
+    @FXML protected TableColumn<Item, TextField> amount_column = new TableColumn<>();
     private final ObservableList<Item> itemData = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-    }
-
-    public void setDefault(ItemParser items) {
-        itemData.addAll(items.getItemList());
-        main_column3.setSortType(SortType.ASCENDING);
-        main_table.getSortOrder().add(main_column3);
-        main_column1.setCellValueFactory(item -> {
+        main_table.setPlaceholder(new Label(""));
+        main_table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        id_column.setMaxWidth(1f * Integer.MAX_VALUE * 15);
+        name_column.setMaxWidth(1f * Integer.MAX_VALUE * 55);
+        on_column.setMaxWidth(1f * Integer.MAX_VALUE * 10);
+        amount_column.setMaxWidth(1f * Integer.MAX_VALUE * 20);
+        on_column.setSortType(SortType.ASCENDING);
+        main_table.getSortOrder().add(on_column);
+        id_column.setCellValueFactory(item -> {
             Label label = new Label();
+            label.setMaxWidth(Double.MAX_VALUE);
             label.setText(item.getValue().getIdString());
             label.setTooltip(new Tooltip(item.getValue().getDescription()));
             label.setStyle("-fx-text-fill: white;");
             return new SimpleObjectProperty<>(label);
         });
-        main_column2.setCellValueFactory(item -> {
+        name_column.setCellValueFactory(item -> {
             String name = item.getValue().getNameString();
             Label label = new Label();
+            label.setMaxWidth(Double.MAX_VALUE);
             label.setText(name);
             label.setTooltip(new Tooltip(item.getValue().getDescription()));
             label.setStyle("-fx-text-fill: white;");
             return new SimpleObjectProperty<>(label);
         });
-        main_column3.setCellValueFactory(row -> {
+        on_column.setCellValueFactory(row -> {
             Item item = row.getValue();
             CheckBox checkBox = new CheckBox();
             checkBox.setSelected(item.getSelectedBool());
+            checkBox.getStylesheets().add(String.valueOf(Main.class.getResource("/css/settings.css")));
             checkBox.selectedProperty().addListener((obv, oldVal, newVal) -> item.setSelected(newVal));
             return new SimpleObjectProperty<>(checkBox);
         });
-        main_column4.setCellValueFactory(row -> {
+        amount_column.setCellValueFactory(row -> {
             Item item = row.getValue();
             TextField field = new TextField();
-            int width = 60;
-            field.setPrefWidth(width);
-            field.setMaxWidth(width);
-            field.setMinWidth(width);
+            field.setPrefWidth(Double.MAX_VALUE);
+            field.setMaxWidth(Double.MAX_VALUE);
+            field.getStylesheets().add(String.valueOf(Main.class.getResource("/css/settings.css")));
             field.setText(String.valueOf(item.getAmountInt()));
             field.textProperty().addListener((obv, oldVal, newVal) -> {
                 try {
@@ -83,8 +88,8 @@ public class ItemSearchController implements Initializable {
         FilteredList<Item> filteredData = new FilteredList<>(itemData, item -> true);
         Comparator<CheckBox> enabledComparator = (a1, a2) -> Boolean.compare(a2.isSelected(), a1.isSelected());
         Comparator<Label> idComparator = (o1, o2) -> Integer.compare(Integer.parseInt(o2.getText()), Integer.parseInt(o1.getText()));
-        main_column1.setComparator(idComparator);
-        main_column3.setComparator(enabledComparator);
+        id_column.setComparator(idComparator);
+        on_column.setComparator(enabledComparator);
         search_field.textProperty().addListener((observable, oldValue, newValue) -> filteredData.setPredicate(item -> {
             if (newValue == null || newValue.isEmpty()) {
                 return true;
@@ -96,6 +101,11 @@ public class ItemSearchController implements Initializable {
         SortedList<Item> sortedData = new SortedList<>(filteredData);
         sortedData.comparatorProperty().bind(main_table.comparatorProperty());
         main_table.setItems(sortedData);
+    }
+
+    public void setDefault(ItemParser items, Stage stage) {
+        stage.widthProperty().addListener(((observable, oldValue, newValue) -> main_table.refresh()));
+        itemData.addAll(items.getItemList());
     }
 
 }

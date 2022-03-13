@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import nobility.tools.TextAreaAutoScroll?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nobility.Controller">
+   <left>
+      <VBox alignment="CENTER" style="-fx-background-color: #05071F;">
+         <children>
+            <ImageView fx:id="profile_image" fitHeight="110.0" fitWidth="106.0" nodeOrientation="INHERIT" pickOnBounds="true">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../images/nobility.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="lblVersion" alignment="CENTER" contentDisplay="CENTER" text="Version: 1.0" textAlignment="CENTER" textFill="#e7e5e5">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="btnConsole" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../css/menu.css" text="Console" textAlignment="CENTER" textFill="#e7e5e5">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/outline_home_white_24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnChecker" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../css/menu.css" text="Checker" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/outline_api_white_24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnProxyChecker" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../css/menu.css" text="Proxy Checker" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/outline_table_view_white_24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnSettings" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../css/menu.css" text="Settings" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/outline_settings_white_24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnAbout" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../css/menu.css" text="About" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/outline_info_white_24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <HBox alignment="BOTTOM_LEFT" fillHeight="false" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label fx:id="cpu" stylesheets="@../css/font.css" text="CPU: 0.0%" textFill="#e7e5e5">
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" top="155.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="ram" stylesheets="@../css/font.css" text="RAM: 0 GiB" textFill="#e7e5e5">
+                     <HBox.margin>
+                        <Insets top="155.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <StackPane prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane fx:id="pnlConsole" visible="false">
+               <center>
+                  <VBox fx:id="pnItems" alignment="CENTER" spacing="5.0" style="-fx-background-color: #02030A;">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="BOTTOM_RIGHT" fillHeight="false" prefHeight="48.0" prefWidth="783.0">
+                           <children>
+                              <Button fx:id="btnClear" alignment="CENTER" blendMode="ADD" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClicks" text="Clear Console" textAlignment="CENTER" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <stylesheets>
+                                    <URL value="@../css/style.css" />
+                                    <URL value="@../css/font.css" />
+                                 </stylesheets>
+                                 <HBox.margin>
+                                    <Insets bottom="4.0" right="4.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <TextAreaAutoScroll fx:id="out" editable="false" wrapText="true" VBox.vgrow="ALWAYS">
+                           <stylesheets>
+                              <URL value="@../css/textarea.css" />
+                              <URL value="@../css/scroll.css" />
+                           </stylesheets></TextAreaAutoScroll>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="pnlChecker" visible="false" StackPane.alignment="CENTER">
+               <bottom>
+                  <VBox BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Button fx:id="btnStart" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClicks" prefHeight="41.0" prefWidth="144.0" stylesheets="@../css/style.css" text="Start" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets right="12.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnStop" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClicks" prefHeight="41.0" prefWidth="144.0" stylesheets="@../css/style.css" text="Stop" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <MenuButton fx:id="menuCombos" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" popupSide="TOP" prefHeight="41.0" prefWidth="144.0" stylesheets="@../css/menubutton.css" text="File &gt; Combos" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                                      </items>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </MenuButton>
+                                    <MenuButton fx:id="menuProxies" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" popupSide="TOP" prefHeight="41.0" prefWidth="144.0" stylesheets="@../css/menubutton.css" text="File &gt; Proxies" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" text="Action 1" />
+                                          <MenuItem mnemonicParsing="false" text="Action 2" />
+                                       </items>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </MenuButton>
+                                    <MenuButton fx:id="menuTools" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" popupSide="TOP" prefHeight="41.0" prefWidth="144.0" stylesheets="@../css/menubutton.css" text="Tools" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" text="Action 1" />
+                                          <MenuItem mnemonicParsing="false" text="Action 2" />
+                                       </items>
+                                    </MenuButton>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="progressVbox" alignment="CENTER" prefHeight="116.0" prefWidth="793.0" style="-fx-background-color: #05071F;" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="lblComboName" alignment="CENTER" contentDisplay="CENTER" prefWidth="553.0" text="Combo.txt" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin></Label>
+                              <Label fx:id="lblComboProgress" alignment="CENTER" contentDisplay="CENTER" prefWidth="766.0" text="0/0 Completed (0%)" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <ProgressBar fx:id="progressBarChecker" prefWidth="756.0" progress="0.0" stylesheets="@../css/progressbar.css">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </ProgressBar>
+                              <Slider fx:id="sldComboLine" prefWidth="765.0" stylesheets="@../css/style.css">
+                                 <padding>
+                                    <Insets left="30.0" right="30.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="15.0" />
+                                 </VBox.margin>
+                              </Slider>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </bottom>
+               <right>
+                  <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER" fillWidth="false" maxHeight="220.0" minHeight="-Infinity" style="-fx-background-color: #05071F;">
+                           <children>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" stylesheets="@../css/font.css" text="Threads:" textAlignment="CENTER" textFill="WHITE" />
+                                    <TextField fx:id="threads" alignment="CENTER" prefWidth="94.0" stylesheets="@../css/settings.css">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin></TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" stylesheets="@../css/font.css" text="TImeout:" textAlignment="CENTER" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="timeout" alignment="CENTER" prefWidth="94.0" stylesheets="@../css/settings.css">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin></TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" stylesheets="@../css/font.css" text="Retries:" textAlignment="CENTER" textFill="WHITE" />
+                                    <TextField fx:id="retries" alignment="CENTER" prefWidth="94.0" stylesheets="@../css/settings.css">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin></TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" style="-fx-background-color: #05071F;" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="lblCpm" prefHeight="30.0" prefWidth="169.0" stylesheets="@../css/font.css" text="CPM: 0" textFill="WHITE" wrapText="true">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblRTCpm" layoutX="11.0" layoutY="11.0" prefHeight="30.0" prefWidth="169.0" stylesheets="@../css/font.css" text="Realtime CPM: 0" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblRetries" layoutX="11.0" layoutY="11.0" prefHeight="30.0" prefWidth="169.0" stylesheets="@../css/font.css" text="Retries: 0" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="lblErrors" layoutX="11.0" layoutY="33.0" prefHeight="30.0" prefWidth="169.0" stylesheets="@../css/font.css" text="Errors: 0" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblProxies" layoutX="11.0" layoutY="55.0" prefHeight="30.0" prefWidth="169.0" stylesheets="@../css/font.css" text="Proxies: 0" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblInvalid" layoutX="11.0" layoutY="99.0" prefHeight="30.0" prefWidth="169.0" stylesheets="@../css/font.css" text="Invalid: 0" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblHits" layoutX="11.0" layoutY="77.0" prefHeight="30.0" prefWidth="169.0" stylesheets="@../css/font.css" text="LQ Hits: 0" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblHQHits" layoutX="11.0" layoutY="99.0" prefHeight="30.0" prefWidth="169.0" stylesheets="@../css/font.css" text="HQ Hits: 0" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblChecked" layoutX="11.0" layoutY="121.0" prefHeight="30.0" prefWidth="169.0" stylesheets="@../css/font.css" text="Checked Hits: 0" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblTime" layoutX="11.0" layoutY="165.0" prefHeight="30.0" prefWidth="169.0" stylesheets="@../css/font.css" text="Elapsed Time: 0:0:0" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblThread" layoutX="11.0" layoutY="187.0" prefHeight="30.0" prefWidth="169.0" stylesheets="@../css/font.css" text="Threads: 0" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" right="4.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </right>
+               <center>
+                  <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="Hits Output Console" textAlignment="CENTER" textFill="#e7e5e5" VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextAreaAutoScroll fx:id="hitsOutput" editable="false" wrapText="true" VBox.vgrow="ALWAYS">
+                                 <stylesheets>
+                                    <URL value="@../css/textarea.css" />
+                                    <URL value="@../css/scroll.css" />
+                                 </stylesheets></TextAreaAutoScroll>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="pnlProxyChecker">
+               <center>
+                  <VBox alignment="TOP_RIGHT" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT">
+                           <children>
+                              <Button fx:id="proxyStartButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClicks" prefHeight="37.0" prefWidth="100.0" stylesheets="@../css/style.css" text="Start" textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <MenuButton alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="37.0" prefWidth="100.0" stylesheets="@../css/menubutton.css" text="Menu" textAlignment="CENTER">
+                                <items>
+                                    <MenuItem id="open_file" mnemonicParsing="false" onAction="#MenuItemHandler" text="Load Proxies" />
+                                    <Menu mnemonicParsing="false" text="Checker Proxies" visible="false">
+                                      <items>
+                                        <MenuItem id="load_checker_proxies" mnemonicParsing="false" text="Load Proxies From Checker" visible="false" />
+                                          <MenuItem id="move_proxies_to_checker" mnemonicParsing="false" text="Move Proxies To Checker" visible="false" />
+                                      </items>
+                                    </Menu>
+                                    <MenuItem id="remove_dupes" mnemonicParsing="false" onAction="#MenuItemHandler" text="Remove Proxy Duplicates" />
+                                    <SeparatorMenuItem mnemonicParsing="false" />
+                                    <MenuItem id="clear_proxies" mnemonicParsing="false" onAction="#MenuItemHandler" text="Clear Proxies" />
+                                    <MenuItem id="clear_table" mnemonicParsing="false" onAction="#MenuItemHandler" text="Clear Proxy Table" />
+                                    <SeparatorMenuItem mnemonicParsing="false" />
+                                    <Menu mnemonicParsing="false" text="Export">
+                                       <items>
+                                          <MenuItem id="export_all" mnemonicParsing="false" onAction="#MenuItemHandler" text="All Proxies" />
+                                          <SeparatorMenuItem mnemonicParsing="false" />
+                                          <Menu mnemonicParsing="false" text="Alive Proxies">
+                                             <items>
+                                                <MenuItem id="export_all_alive" mnemonicParsing="false" onAction="#MenuItemHandler" text="All Alive Proxies" />
+                                                <SeparatorMenuItem mnemonicParsing="false" />
+                                                <MenuItem id="export_alive_elite" mnemonicParsing="false" onAction="#MenuItemHandler" text="Elite Proxies" />
+                                                <MenuItem id="export_alive_anonymous" mnemonicParsing="false" onAction="#MenuItemHandler" text="Anonymous Proxies" />
+                                                <MenuItem id="export_alive_transparent" mnemonicParsing="false" onAction="#MenuItemHandler" text="Transparent Proxies" />
+                                             </items>
+                                          </Menu>
+                                          <MenuItem id="export_all_dead" mnemonicParsing="false" onAction="#MenuItemHandler" text="Dead Proxies" />
+                                          <SeparatorMenuItem mnemonicParsing="false" />
+                                          <MenuItem id="export_table" mnemonicParsing="false" onAction="#MenuItemHandler" text="Entire Table (.csv)" />
+                                       </items>
+                                    </Menu>
+                                    <SeparatorMenuItem mnemonicParsing="false" />
+                                    <MenuItem id="preferences" mnemonicParsing="false" onAction="#MenuItemHandler" text="Preferences" />
+                                </items>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </MenuButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TableView fx:id="table_proxy" prefHeight="458.0" prefWidth="785.0" VBox.vgrow="ALWAYS">
+                           <columns>
+                              <TableColumn fx:id="column_ip" prefWidth="143.1781005859375" text="IP" />
+                              <TableColumn fx:id="column_port" prefWidth="70.427490234375" text="Port" />
+                              <TableColumn fx:id="column_status" prefWidth="100.54669189453125" text="Status" />
+                              <TableColumn fx:id="column_anonymity" prefWidth="110.33331298828125" text="Anonymity" />
+                              <TableColumn fx:id="column_country" prefWidth="121.0" text="Country" />
+                              <TableColumn fx:id="column_response_time" prefWidth="132.0" text="Response" />
+                              <TableColumn fx:id="column_type" prefWidth="105.0" text="Type" />
+                           </columns>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                           <stylesheets>
+                              <URL value="@../css/tableview.css" />
+                              <URL value="@../css/scroll.css" />
+                           </stylesheets>
+                        </TableView>
+                        <HBox id="HBox" alignment="CENTER" fillHeight="false" spacing="5.0">
+                           <children>
+                              <Label fx:id="label_loaded_proxies" alignment="CENTER" contentDisplay="CENTER" maxWidth="-1.0" stylesheets="@../css/font.css" text="Loaded Proxies: 0" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font size="11.0" fx:id="x3" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="|" textAlignment="CENTER" HBox.hgrow="NEVER" />
+                              <Label fx:id="label_checked_proxies" alignment="CENTER" contentDisplay="CENTER" font="$x3" maxWidth="-1.0" stylesheets="@../css/font.css" text="Checked Proxies: 0" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="|" textAlignment="CENTER" HBox.hgrow="NEVER" />
+                              <Label fx:id="label_working_proxies" alignment="CENTER" contentDisplay="CENTER" font="$x3" maxWidth="-1.0" stylesheets="@../css/font.css" text="Working Proxies: 0" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="|" textAlignment="CENTER" />
+                              <Label fx:id="label_ip_address" alignment="CENTER" contentDisplay="CENTER" text="0.0.0.0" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                              <ProgressBar fx:id="progressBarProxy" prefHeight="18.0" prefWidth="97.0" progress="NaN" stylesheets="@../css/progressbar.css" />
+                           </children>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="pnlSettings" visible="false">
+               <center>
+                  <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="(Hover over settings to see their descriptions)" textAlignment="CENTER" textFill="#e7e5e5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #05071F;">
+                           <children>
+                              <VBox HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <CheckBox fx:id="s_autoremovecombodupes" mnemonicParsing="false" onAction="#handleOptions" text="Auto Remove Combo Dupes On Load" textFill="WHITE">
+                                       <tooltip>
+                                          <Tooltip text="Removes combo duplicate lines when you load them." />
+                                       </tooltip>
+                                       <stylesheets>
+                                          <URL value="@../css/font.css" />
+                                          <URL value="@../css/settings.css" />
+                                       </stylesheets>
+                                    </CheckBox>
+                                    <CheckBox fx:id="s_autoremoveproxydupes" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleOptions" text="Auto Remove Proxy Dupes On Load" textFill="WHITE">
+                                       <tooltip>
+                                          <Tooltip text="Removes proxy duplicate lines when you load them." />
+                                       </tooltip>
+                                       <stylesheets>
+                                          <URL value="@../css/settings.css" />
+                                          <URL value="@../css/font.css" />
+                                       </stylesheets>
+                                    </CheckBox>
+                                    <CheckBox fx:id="s_showhits" mnemonicParsing="false" onAction="#handleOptions" text="Show Hits In Hits Output Console" textFill="WHITE">
+                                       <tooltip>
+                                          <Tooltip text="Shows hits in the Hits Output Console." />
+                                       </tooltip>
+                                       <stylesheets>
+                                          <URL value="@../css/settings.css" />
+                                          <URL value="@../css/font.css" />
+                                       </stylesheets>
+                                    </CheckBox>
+                                    <CheckBox fx:id="s_showdebug" mnemonicParsing="false" onAction="#handleOptions" text="Show Debug Messages In Console" textFill="WHITE">
+                                       <tooltip>
+                                          <Tooltip text="Shows errors and debug messages in the console." />
+                                       </tooltip>
+                                       <stylesheets>
+                                          <URL value="@../css/settings.css" />
+                                          <URL value="@../css/font.css" />
+                                       </stylesheets>
+                                    </CheckBox>
+                                    <CheckBox fx:id="s_emptycycle" mnemonicParsing="false" onAction="#handleOptions" text="Empty Console Cycle" textFill="WHITE">
+                                       <tooltip>
+                                          <Tooltip text="Automatically clears the console if it gets too big. (Reduces lag)" />
+                                       </tooltip>
+                                       <stylesheets>
+                                          <URL value="@../css/settings.css" />
+                                          <URL value="@../css/font.css" />
+                                       </stylesheets>
+                                    </CheckBox>
+                                    <CheckBox fx:id="s_consolealert" layoutX="10.0" layoutY="122.0" mnemonicParsing="false" onAction="#handleOptions" text="Show Console Alert" textFill="WHITE">
+                                       <tooltip>
+                                          <Tooltip text="Makes the Console button in the menu blink when important messages are printed in the console." />
+                                       </tooltip>
+                                       <stylesheets>
+                                          <URL value="@../css/settings.css" />
+                                          <URL value="@../css/font.css" />
+                                       </stylesheets>
+                                    </CheckBox>
+                                    <CheckBox fx:id="s_showproxyerrors" mnemonicParsing="false" onAction="#handleOptions" text="Show Proxy Errors" textFill="WHITE">
+                                       <tooltip>
+                                          <Tooltip text="Shows proxy errors in the console." />
+                                       </tooltip>
+                                       <stylesheets>
+                                          <URL value="@../css/settings.css" />
+                                          <URL value="@../css/font.css" />
+                                       </stylesheets>
+                                    </CheckBox>
+                                    <CheckBox fx:id="s_closetotray" layoutX="10.0" layoutY="206.0" mnemonicParsing="false" onAction="#handleOptions" text="Close To System Tray" textFill="WHITE">
+                                       <tooltip>
+                                          <Tooltip text="Pressing the close button will hide this window, but not close the app." />
+                                       </tooltip>
+                                       <stylesheets>
+                                          <URL value="@../css/settings.css" />
+                                          <URL value="@../css/font.css" />
+                                       </stylesheets>
+                                    </CheckBox>
+                                    <CheckBox fx:id="s_autoscroll" layoutX="10.0" layoutY="234.0" mnemonicParsing="false" onAction="#handleOptions" text="Autoscroll To Bottom" textFill="WHITE">
+                                       <tooltip>
+                                          <Tooltip text="Enables the console and hits output to scroll to the bottom on a new entry" />
+                                       </tooltip>
+                                       <stylesheets>
+                                          <URL value="@../css/settings.css" />
+                                          <URL value="@../css/font.css" />
+                                       </stylesheets>
+                                    </CheckBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <CheckBox fx:id="s_savechecked" mnemonicParsing="false" onAction="#handleOptions" text="Save Hits To Checked List" textFill="WHITE">
+                                       <tooltip>
+                                          <Tooltip text="Saves hits to a list so you never check them again." />
+                                       </tooltip>
+                                       <stylesheets>
+                                          <URL value="@../css/settings.css" />
+                                          <URL value="@../css/font.css" />
+                                       </stylesheets>
+                                    </CheckBox>
+                                    <CheckBox fx:id="s_checkRealmEye" layoutX="10.0" layoutY="66.0" mnemonicParsing="false" onAction="#handleOptions" text="Check Realmeye For Extra Information" textFill="WHITE">
+                                       <tooltip>
+                                          <Tooltip text="Uses a RealmEye API to gather certain information such as Account Rank &amp; Character info. Uses more proxies and takes longer to check hits." />
+                                       </tooltip>
+                                       <stylesheets>
+                                          <URL value="@../css/settings.css" />
+                                          <URL value="@../css/font.css" />
+                                       </stylesheets>
+                                    </CheckBox>
+                                    <CheckBox fx:id="s_namechosen" layoutX="10.0" layoutY="122.0" mnemonicParsing="false" onAction="#handleOptions" text="Skip Hits With A Default Name" textFill="WHITE">
+                                       <tooltip>
+                                          <Tooltip text="Skips accounts if they have not chosen their name." />
+                                       </tooltip>
+                                       <stylesheets>
+                                          <URL value="@../css/settings.css" />
+                                          <URL value="@../css/font.css" />
+                                       </stylesheets>
+                                    </CheckBox>
+                                    <CheckBox fx:id="s_savegold" layoutX="10.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleOptions" text="Save Gold Value To Seperate Text File" textFill="WHITE">
+                                       <tooltip>
+                                          <Tooltip text="Saves hits gold value with their combo to a different file for easy navigation." />
+                                       </tooltip>
+                                       <stylesheets>
+                                          <URL value="@../css/settings.css" />
+                                          <URL value="@../css/font.css" />
+                                       </stylesheets>
+                                    </CheckBox>
+                                    <CheckBox fx:id="s_saveranks" layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onAction="#handleOptions" text="Save Account Ranks To Seperate Text File" textFill="WHITE">
+                                       <tooltip>
+                                          <Tooltip text="Saves account ranks in order with their combo to a seperate file for easy navigation. Requires Check Realmeye For Extra Information" />
+                                       </tooltip>
+                                       <stylesheets>
+                                          <URL value="@../css/settings.css" />
+                                          <URL value="@../css/font.css" />
+                                       </stylesheets>
+                                    </CheckBox>
+                                    <CheckBox fx:id="s_savenames" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleOptions" text="Save Names To Seperate Text File" textFill="WHITE">
+                                       <tooltip>
+                                          <Tooltip text="Saves accounts names with their login to a seperate file." />
+                                       </tooltip>
+                                       <stylesheets>
+                                          <URL value="@../css/settings.css" />
+                                          <URL value="@../css/font.css" />
+                                       </stylesheets>
+                                    </CheckBox>
+                                    <CheckBox fx:id="s_skiptooshort" layoutX="10.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleOptions" text="Skip Combos With Short Passwords" textFill="WHITE">
+                                       <tooltip>
+                                          <Tooltip text="Skips combos with a password lower than 8 in length. ROTMG doesn't let you log in if your password is too small." />
+                                       </tooltip>
+                                       <stylesheets>
+                                          <URL value="@../css/settings.css" />
+                                          <URL value="@../css/font.css" />
+                                       </stylesheets>
+                                    </CheckBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label stylesheets="@../css/font.css" text="Proxy Type:" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ChoiceBox fx:id="chbxProxyType" prefHeight="25.0" prefWidth="102.0" stylesheets="@../css/settings.css">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </ChoiceBox>
+                                    <Label layoutX="15.0" layoutY="15.0" stylesheets="@../css/font.css" text="Realmeye Retries:" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <tooltip>
+                                          <Tooltip text="Retries used for checking realmeye info. Requires Check Realmeye For Extra Information" />
+                                       </tooltip>
+                                    </Label>
+                                    <TextField fx:id="tfRealmeyeRetries" maxWidth="57.0" prefHeight="25.0" prefWidth="57.0" stylesheets="@../css/settings.css">
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <tooltip>
+                                          <Tooltip text="Retries used for checking realmeye info. Requires Check Realmeye For Extra Information" />
+                                       </tooltip>
+                                    </TextField>
+                                    <Label stylesheets="@../css/font.css" text="Combo Seperator:" textFill="WHITE">
+                                       <tooltip>
+                                          <Tooltip text="The seperator for combo files. Sometimes combos use ; instead of : . Set this before checking." />
+                                       </tooltip>
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ChoiceBox fx:id="chbxSeperator" prefHeight="25.0" prefWidth="56.0" stylesheets="@../css/settings.css">
+                                       <tooltip>
+                                          <Tooltip text="The seperator for combo files. Sometimes combos use ; instead of : . Set this before checking." />
+                                       </tooltip>
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </ChoiceBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox style="-fx-background-color: #05071F;">
+                           <children>
+                              <VBox HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox layoutX="10.0" layoutY="10.0" prefHeight="39.0">
+                                       <children>
+                                          <Label stylesheets="@../css/font.css" text="HQ Account Rank:" textFill="WHITE">
+                                             <HBox.margin>
+                                                <Insets left="3.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <tooltip>
+                                                <Tooltip text="The star rank needed for an account to be considered 'High Quality'. Put 0 to skip this check. Requires Check Realmeye For Extra Information." />
+                                             </tooltip>
+                                          </Label>
+                                          <TextField fx:id="tfRank" stylesheets="@../css/settings.css">
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                             <tooltip>
+                                                <Tooltip text="The star rank needed for an account to be considered 'High Quality'. Put 0 to skip this check. Requires Check Realmeye For Extra Information." />
+                                             </tooltip>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="49.0" prefHeight="39.0" prefWidth="232.0">
+                                       <children>
+                                          <Label stylesheets="@../css/font.css" text="HQ Gold Amount:" textFill="WHITE">
+                                             <HBox.margin>
+                                                <Insets left="3.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <tooltip>
+                                                <Tooltip text="The gold amount needed for an account to be considered 'High Quality'. Put 0 to skip this check." />
+                                             </tooltip>
+                                          </Label>
+                                          <TextField fx:id="tfGold" stylesheets="@../css/settings.css">
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                             <tooltip>
+                                                <Tooltip text="The gold amount needed for an account to be considered 'High Quality'. Put 0 to skip this check." />
+                                             </tooltip>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="39.0">
+                                       <children>
+                                          <Label stylesheets="@../css/font.css" text="HQ Fame Amount:" textFill="WHITE">
+                                             <HBox.margin>
+                                                <Insets left="3.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <tooltip>
+                                                <Tooltip text="The fame amount needed for an account to be considered 'High Quality'. Put 0 to skip this check." />
+                                             </tooltip>
+                                          </Label>
+                                          <TextField fx:id="tfFame" stylesheets="@../css/settings.css">
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                             <tooltip>
+                                                <Tooltip text="The fame amount needed for an account to be considered 'High Quality'. Put 0 to skip this check." />
+                                             </tooltip>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="11.0" layoutY="11.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox fillHeight="false" prefWidth="232.0">
+                                       <children>
+                                          <Label stylesheets="@../css/font.css" text="HQ Pet Yard Rarity:" textFill="WHITE">
+                                             <HBox.margin>
+                                                <Insets left="3.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <tooltip>
+                                                <Tooltip text="The minimum pet rarity needed for an account to be considered 'High Quality'." />
+                                             </tooltip>
+                                          </Label>
+                                          <ChoiceBox fx:id="chbxPetRarity" prefWidth="81.0" stylesheets="@../css/settings.css">
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                             <tooltip>
+                                                <Tooltip text="The minimum pet rarity (for any pet) needed for an account to be considered 'High Quality'." />
+                                             </tooltip>
+                                          </ChoiceBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefWidth="219.0">
+                                       <children>
+                                          <Label stylesheets="@../css/font.css" text="HQ Max Character Slots:" textFill="WHITE">
+                                             <HBox.margin>
+                                                <Insets left="3.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <tooltip>
+                                                <Tooltip text="The amount of character slots needed for an account to be considered 'High Quality'. Put 0 to skip this check." />
+                                             </tooltip>
+                                          </Label>
+                                          <TextField fx:id="tfMaxCharacters" stylesheets="@../css/settings.css">
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                             <tooltip>
+                                                <Tooltip text="The amount of character slots needed for an account to be considered 'High Quality'. Put 0 to skip this check." />
+                                             </tooltip>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets top="20.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </center>
+               <top>
+                  <HBox alignment="CENTER_RIGHT" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="btnResetSettings" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="37.0" prefWidth="120.0" text="Reset Settings" textAlignment="CENTER" wrapText="true">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <stylesheets>
+                              <URL value="@../css/style.css" />
+                              <URL value="@../css/font.css" />
+                           </stylesheets>
+                        </Button>
+                        <Button fx:id="btnSaveSettings" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClicks" prefHeight="37.0" prefWidth="120.0" text="Save Settings" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <stylesheets>
+                              <URL value="@../css/style.css" />
+                              <URL value="@../css/font.css" />
+                           </stylesheets>
+                        </Button>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets top="10.0" />
+                     </BorderPane.margin>
+                  </HBox>
+               </top>
+            </BorderPane>
+            <BorderPane fx:id="pnlAbout" visible="false">
+               <center>
+                  <VBox alignment="TOP_CENTER">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="RealmCrak is the best ROTMG Checker there is. I have never found one that does what RealmCrak does. After years of improvement, I have learned so much and talked to some great people. Thank you for using it. :)" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="If you have a java/kotlin/android project you need done, contact me. I am always looking for work. We can discuss prices." textAlignment="CENTER" textFill="#8b93c9" wrapText="true">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Email: nobilitydev@protonmail.com" textAlignment="CENTER" textFill="#8b93c9" wrapText="true">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Discord: Nobility#9814" textAlignment="CENTER" textFill="#8b93c9" wrapText="true">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </Label>
+                        <Button fx:id="btnUpdates" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClicks" prefHeight="41.0" prefWidth="164.0" text="Check For Updates" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <stylesheets>
+                              <URL value="@../css/style.css" />
+                              <URL value="@../css/font.css" />
+                           </stylesheets>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

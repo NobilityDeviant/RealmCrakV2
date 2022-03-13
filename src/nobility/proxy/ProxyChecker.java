@@ -1,5 +1,6 @@
 package nobility.proxy;
 
+import javafx.application.Platform;
 import javafx.collections.ListChangeListener;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ProgressIndicator;
@@ -12,17 +13,17 @@ import nobility.proxy.commands.ExportCommand;
 import nobility.proxy.commands.LoadCommand;
 import nobility.proxy.commands.ProxyCheckCommand;
 import nobility.proxy.components.ProxySettings;
-import nobility.proxy.components.RequestAPI;
 import nobility.proxy.components.UserSettings;
 import nobility.proxy.components.entities.Proxy;
 import nobility.proxy.components.entities.ProxyAnonymity;
 import nobility.proxy.components.entities.ProxyStatus;
 import nobility.proxy.events.ProxyCheckerKeyEvent;
+import nobility.tools.Alerter;
+import nobility.tools.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -40,36 +41,22 @@ public class ProxyChecker {
         return ProxySettings.getConfig();
     }
 
-    private String getIp() throws IOException {
-        BufferedReader r = new BufferedReader(new InputStreamReader(new URL("https://icanhazip.com/").openStream(),
-                StandardCharsets.UTF_8));
-        return r.readLine();
-    }
-
     public ProxyChecker(Controller controller) {
         this.controller = controller;
 
-        UserSettings settings = ProxySettings.getConfig();
-
-        String ip = null;
-        try {
-            ip = getIp();
-        } catch (IOException e) {
-            System.out.println("Unable to grab IP for proxy checker. Error: " + e.getMessage());
-            //e.printStackTrace();
-        }
-
-        if (ip != null && !settings.getIp().equals(ip)) {
-            ProxySettings.saveConfig(settings.setIp(ip));
-        }
+        new Thread(() -> {
+            String ip = "0.0.0.0";
+            try {
+                ip = getIp();
+            } catch (IOException ignored) {}
+            if (ip != null && !getSettings().getIp().equals(ip)) {
+                ProxySettings.saveConfig(getSettings().setIp(ip));
+            }
+            String finalIp = ip;
+            Platform.runLater(() -> controller.label_ip_address.setText(finalIp));
+        }).start();
 
         notifyCompleted = false;
-        // set users IP address on label
-        if (ip != null) {
-            controller.label_ip_address.setText(ip);
-        } else {
-            controller.label_ip_address.setText("Unable to get IP");
-        }
 
         controller.table_proxy.setOnKeyPressed(new ProxyCheckerKeyEvent());
 
@@ -82,17 +69,19 @@ public class ProxyChecker {
         controller.column_response_time.setCellValueFactory(new PropertyValueFactory<>("ResponseTime"));
         controller.column_type.setCellValueFactory(new PropertyValueFactory<>("ProxyType"));
 
+        controller.table_proxy.getSortOrder().add(controller.column_status);
+
         controller.table_proxy.setRowFactory(tp -> new TableRow<Proxy>() {
             @Override
             protected void updateItem(Proxy proxy, boolean empty) {
                 super.updateItem(proxy, empty);
-                if ((proxy == null) || (proxy.getProxyStatus() == ProxyStatus.DEAD))  {
+                if ((proxy == null) || (proxy.getProxyStatus() == ProxyStatus.DEAD)) {
                     setStyle("");
                 } else {
                     ProxyAnonymity anonymity = proxy.getProxyAnonymity();
                     for (Pair<ProxyAnonymity, String> p : ProxySettings.getConfig().getColorScheme()) {
                         if (p.getKey() == anonymity) {
-                            setStyle("-fx-background-color: "+ p.getValue() + ";");
+                            setStyle("-fx-background-color: " + p.getValue() + ";");
                         }
                     }
                 }
@@ -102,20 +91,23 @@ public class ProxyChecker {
         // manage progress bar and count for working proxies and checked proxies
         controller.table_proxy.getItems().addListener((ListChangeListener<Proxy>) c -> {
             if (!c.getList().isEmpty()) {
-                Proxy proxy = c.getList().get(c.getList().size()-1); // newest added proxy
+                Proxy proxy = c.getList().get(c.getList().size() - 1); // newest added proxy
                 controller.label_checked_proxies.setText("Checked Proxies: " + c.getList().size());
                 if ((c.getList().size() == proxies.size())) {
-                    controller.progressBar.setProgress(0f);
-                    controller.button_check.setDisable(false); // disable check button until all proxies are checked
-                    if(!notifyCompleted) {
-                        AlertBox.show(Alert.AlertType.INFORMATION, "Task Completed",
-                                "Proxy Checker has finished checking your proxies!");
+                    controller.progressBarProxy.setProgress(0f);
+                    controller.proxyStartButton.setDisable(false); // disable check button until all proxies are checked
+                    if (!notifyCompleted) {
+                        Alerter.showAlert(Alert.AlertType.INFORMATION, "Task Completed",
+                                "Proxy checker has finished checking your proxies!");
                         notifyCompleted = true;
                     }
                 } else {
-                    controller.progressBar.setProgress((float) c.getList().size() / proxies.size());
+                    controller.progressBarProxy.setProgress((float) c.getList().size() / proxies.size());
                 }
                 if (proxy.getProxyStatus() == ProxyStatus.ALIVE) {
+                    controller.table_proxy.getSortOrder().clear();
+                    controller.table_proxy.getSortOrder().add(controller.column_status);
+                    controller.table_proxy.sort();
                     int current_working = Integer.parseInt(controller.label_working_proxies.getText().split(":")[1].trim());
                     controller.label_working_proxies.setText("Working Proxies: " + (current_working + 1));
                 }
@@ -124,7 +116,7 @@ public class ProxyChecker {
 
         // allow drag and drop of files into the loaded proxies view
         controller.table_proxy.setOnDragOver(event -> {
-            if(!ProxyCheckCommand.isRunning()) {
+            if (!ProxyCheckCommand.isRunning()) {
                 event.acceptTransferModes(TransferMode.COPY_OR_MOVE);
             } else {
                 event.acceptTransferModes(TransferMode.NONE);
@@ -144,41 +136,42 @@ public class ProxyChecker {
     }
 
     public void loadFiles() {
-        if(!ProxyCheckCommand.isRunning()) {
+        if (!ProxyCheckCommand.isRunning()) {
             List<String> temp = LoadCommand.loadFile(null);
             if (temp != null) {
                 proxies.addAll(temp);
                 controller.label_loaded_proxies.setText("Loaded Proxies: " + proxies.size());
+                Toast.makeToast("Loaded " + proxies.size() + " proxies.");
             }
         } else {
-            AlertBox.show(Alert.AlertType.ERROR, "Checker is running!", "You can't load proxies while the checker is running.");
+            Toast.makeToast("Please wait for the proxy checker to stop.");
         }
     }
 
-    public void removeDupes() {
+    public void removeDuplicates() {
         if (!ProxyCheckCommand.isRunning()) {
             if (proxies.isEmpty()) {
-                AlertBox.show(Alert.AlertType.ERROR, "No Proxies Loaded", "There are no proxies to check!");
+                Toast.makeToast("Please load a new proxy file first.");
                 return;
             }
             Set<String> dedupe = new LinkedHashSet<>(proxies);
             if (dedupe.size() == proxies.size()) {
-                AlertBox.show(Alert.AlertType.INFORMATION, "Clean Proxies", "No proxy duplicates found.");
+                Toast.makeToast("No proxy duplicates found!");
             } else {
                 int found = proxies.size() - dedupe.size();
                 proxies.clear();
                 proxies.addAll(dedupe);
                 controller.label_loaded_proxies.setText("Loaded Proxies: " + proxies.size());
-                AlertBox.show(Alert.AlertType.INFORMATION, "Cleaned", "Successfully removed " + found + " duplicate proxies.");
+                Toast.makeToast("Successfully removed " + found + " duplicate proxies.");
             }
         } else {
-            AlertBox.show(Alert.AlertType.ERROR, "Checker is running!", "You can't remove duplicate proxies while the checker is running.");
+            Toast.makeToast("Please wait for the proxy checker to stop.");
         }
     }
 
     public void exportAll() {
         if (ProxyCheckCommand.isRunning()) {
-            AlertBox.show(Alert.AlertType.ERROR, "Checker is running!", "Please wait for the checker to stop.");
+            Toast.makeToast("Please wait for the proxy checker to stop.");
             return;
         }
         ExportCommand.saveNoFilter(proxies);
@@ -186,30 +179,43 @@ public class ProxyChecker {
 
     public void clearProxies() {
         proxies.clear();
-        controller.label_loaded_proxies.setText("Loaded Proxies: " + proxies.size());
+        controller.label_loaded_proxies.setText("Loaded Proxies: 0");
     }
 
     public void start() {
+        if (getSettings().getIp().equals("0.0.0.0")) {
+            Alerter.showConfirm("Your IP couldn't be resolved. You will be unable to use the proxy checker without this. Would you " +
+                    "like to try to receive it again?", () -> {
+                try {
+                    String ip = getIp();
+                    ProxySettings.saveConfig(getSettings().setIp(ip));
+                    Platform.runLater(() -> controller.label_ip_address.setText(ip));
+                    Alerter.showMessage("IP Resolved", "Successfully received your IP address. You can now use the proxy checker.");
+                } catch (IOException e) {
+                    Alerter.showAlert(Alert.AlertType.ERROR, "Failed", "Failed to resolve your IP address. Please make sure you don't block " +
+                            "https://icanhazip.com/ and try again.");
+                }
+            });
+            return;
+        }
         if (!ProxyCheckCommand.isRunning()) {
             if (!proxies.isEmpty()) {
-                controller.progressBar.setProgress(ProgressIndicator.INDETERMINATE_PROGRESS);
+                controller.progressBarProxy.setProgress(ProgressIndicator.INDETERMINATE_PROGRESS);
                 controller.label_working_proxies.setText("Working Proxies: 0"); // reset working proxy count
                 controller.table_proxy.getItems().clear(); // reset table
-                controller.button_check.setDisable(true);
+                controller.proxyStartButton.setDisable(true);
                 ProxyCheckCommand.startCheck(proxies, controller.table_proxy);
                 notifyCompleted = false;
             } else {
-                AlertBox.show(Alert.AlertType.ERROR, "No Loaded Proxies", "There are no proxies to check!");
+                Toast.makeToast("Please load a new proxy file first.");
             }
-                /* else {
-                boolean choice = AlertBox.showImportProxy(Alert.AlertType.INFORMATION, "No Loaded Proxies",
-                        "There are no proxies to check! To check a proxy you must load at least one first.\n\n"
-                                + "Would you like to import proxies from the web? Press No or close this window to decline.");
-                if (choice) {
-                    loadLinks();
-                }
-            }*/
         }
+    }
+
+    private String getIp() throws IOException {
+        BufferedReader r = new BufferedReader(new InputStreamReader(new URL("https://icanhazip.com/").openStream(),
+                StandardCharsets.UTF_8));
+        return r.readLine();
     }
 
     public List<String> getProxies() {

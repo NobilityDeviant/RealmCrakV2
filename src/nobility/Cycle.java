@@ -25,7 +25,7 @@ public class Cycle implements Runnable {
                             + model.module().settings().getProgress() + "/"
                             + model.module().settings().getComboSize()));
                 } else {
-                    Platform.runLater(() -> model.getIcon().setTrayIconTooltip("RealmCrak is sleeping.. Zzz"));
+                    Platform.runLater(() -> model.getIcon().setTrayIconTooltip(Model.APP_NAME + " is sleeping.. Zzz"));
                 }
             }
             if (saveSettingsTimer.isRunning()) {

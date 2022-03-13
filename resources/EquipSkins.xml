@@ -3077,7 +3077,7 @@
       <Soulbound/>
       <feedPower>1000</feedPower>
    </Object>
-   <Object type="0x4bea" id="Bard Priestess Skin">
+   <Object type="0x4bea" id="Lyrical Priestess Skin">
       <Class>Equipment</Class>
       <Item/>
       <AnimatedTexture>
@@ -9602,6 +9602,276 @@
       <SlotType>10</SlotType>
       <Description>A sprout taken from Belladonna's Garden after a stressful first week above the soil. It is blossoming into an ambitious young plant!\n\nSkin Class: Priest\nSprite Credits: CrystalPX</Description>
       <Activate skinType="9407">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>7</BagType>
+      <Soulbound/>
+      <feedPower>1000</feedPower>
+   </Object>
+   <Object type="0x24c2" id="The 12th Sorcerer Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>565</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>He's ready to go around the realm and see what it has to offer!\n\nSkin Class: Sorcerer\nSprite Credits: CrystalPX</Description>
+      <Activate skinType="9409">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <feedPower>1000</feedPower>
+   </Object>
+   <Object type="0x24c4" id="Brad the Bard Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>566</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Introducing: Brad the Bard! He's so good at music that he can shoot arrows through his singing voice!\n\nSkin Class: Bard\nSprite Credits: Lily</Description>
+      <Activate skinType="9411">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <feedPower>1000</feedPower>
+   </Object>
+   <Object type="0x24c6" id="Abyss Adventurer Necromancer Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>567</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>One has to check up on all the wretched souls her herself sent to Hell.\n\nSkin Class: Necromancer\nSprite Credits: CrystalPX</Description>
+      <Activate skinType="9413">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>7</BagType>
+      <Soulbound/>
+      <feedPower>1000</feedPower>
+   </Object>
+   <Object type="0x24c8" id="Leech Robot Necromancer Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>568</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>He's made of steel, and soy protein - And what it likes the most is leeching off Oryx's minions health bars!\n\nSkin Class: Necromancer\nSprite Credits: CrystalPX</Description>
+      <Activate skinType="9415">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>7</BagType>
+      <Soulbound/>
+      <feedPower>1000</feedPower>
+   </Object>
+   <Object type="0x24ca" id="Merfolk Paladin Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>569</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Caution. You cannot breathe in the water even if you use this skin.\n\nSkin Class: Paladin\nSprite Credits: Nazoado</Description>
+      <Activate skinType="9417">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <feedPower>1000</feedPower>
+   </Object>
+   <Object type="0x24cc" id="Swimsuit Ninja Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>570</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>She's not a fan of crowded beaches, instead sunbathing at a hidden bay. Rumor has it that she's secretly addicted to Pink Passion Breezes.\n\nSkin Class: Ninja\nSprite Credits: Seelpit</Description>
+      <Activate skinType="9419">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>7</BagType>
+      <Soulbound/>
+      <feedPower>1000</feedPower>
+   </Object>
+   <Object type="0x24ce" id="Ghost Captain Rogue Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>571</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Let's sail to our graves!\n\nSkin Class: Rogue\nSprite Credits: Zquidx</Description>
+      <Activate skinType="9421">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <feedPower>1000</feedPower>
+   </Object>
+   <Object type="0x24d0" id="Night Huntress Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>572</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Covered in the dark of night, the moonlight is my only companion in the search for the truth.\n\nSkin Class: Huntress\nSprite Credits: CrystalPX</Description>
+      <Activate skinType="9423">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>7</BagType>
+      <Soulbound/>
+      <feedPower>1000</feedPower>
+   </Object>
+   <Object type="0x24d2" id="Blorph the Archer Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>573</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Shlarp Shlarp!\n\nSkin Class: Archer\nSprite Credits: Aurusenth</Description>
+      <Activate skinType="9425">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>7</BagType>
+      <Soulbound/>
+      <feedPower>1000</feedPower>
+   </Object>
+   <Object type="0x24d4" id="Mushroom Girl Rogue Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>574</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>She releases a cloud of spores to conceal herself from enemies.\n\nSkin Class: Rogue\nSprite Credits: Mizumi</Description>
+      <Activate skinType="9427">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <feedPower>1000</feedPower>
+   </Object>
+   <Object type="0x24d6" id="Wasteland Mercenary Archer Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>575</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>I can bring you in warm, or I can bring you in cold. That is the way.\n\nSkin Class: Archer\nSprite Credits: Mizumi, Wilhuff</Description>
+      <Activate skinType="9429">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>7</BagType>
+      <Soulbound/>
+      <feedPower>1000</feedPower>
+   </Object>
+   <Object type="0x24d8" id="Dungeon Recruit Huntress Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>576</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Rewarded to brave designers who adventure into uncharted new dungeons.\n\nSkin Class: Huntress\nSprite Credits: Mizumi</Description>
+      <Activate skinType="9431">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>7</BagType>
+      <Soulbound/>
+      <feedPower>1000</feedPower>
+   </Object>
+   <Object type="0x24da" id="Dungeon Recruit Archer Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>577</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Rewarded to brave designers who adventure into uncharted new dungeons.\n\nSkin Class: Archer\nSprite Credits: Mizumi</Description>
+      <Activate skinType="9433">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>7</BagType>
+      <Soulbound/>
+      <feedPower>1000</feedPower>
+   </Object>
+   <Object type="0x24dc" id="Mini Treasure Hunter Archer Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>578</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Scavenging exceptional treasurer with exceptional flair!\n\nSkin Class: Archer\nSprite Credits: Aurum</Description>
+      <Activate skinType="9435">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>7</BagType>
+      <Soulbound/>
+      <feedPower>1000</feedPower>
+   </Object>
+   <Object type="0x24de" id="Mini Vampire Rogue Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>579</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>What is a rogue?\n\nSkin Class: Rogue</Description>
+      <Activate skinType="9437">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>7</BagType>
+      <Soulbound/>
+      <feedPower>1000</feedPower>
+   </Object>
+   <Object type="0x24e0" id="Torched Paleolithic Wizard Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>580</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Hold a torch for building a new civilization.\n\nSkin Class: Wizard\nSprite Credits: Nazoado</Description>
+      <Activate skinType="9439">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>7</BagType>
+      <Soulbound/>
+      <feedPower>1000</feedPower>
+   </Object>
+   <Object type="0x24e2" id="Crab Samurai Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>581</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>It loves boogieing to electronic dance music.\n\nSkin Class: Samurai\nSprite Credits: Zquidx</Description>
+      <Activate skinType="9441">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <feedPower>1000</feedPower>
+   </Object>
+   <Object type="0x24e4" id="Sleepover Archer Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>582</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>The baby sitter of sleepovers.\n\nSkin Class: Archer\nSprite Credits: Zquidx</Description>
+      <Activate skinType="9443">UnlockSkin</Activate>
       <Consumable/>
       <BagType>7</BagType>
       <Soulbound/>

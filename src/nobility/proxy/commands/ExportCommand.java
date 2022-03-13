@@ -2,11 +2,12 @@ package nobility.proxy.commands;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
-import nobility.proxy.AlertBox;
+import nobility.tools.Alerter;
 import nobility.proxy.components.ProxySettings;
 import nobility.proxy.components.entities.Proxy;
 import nobility.proxy.components.entities.ProxyAnonymity;
 import nobility.proxy.components.entities.ProxyStatus;
+import nobility.tools.Toast;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -14,15 +15,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-/**
- * Class contains static methods that facilitate exporting a Proxies to disk.
- */
-@SuppressWarnings("all")
 public class ExportCommand {
 
     /**
      * Gets a user selected destination file to save all loaded proxies onto, in the format ip:port
-     * @param listView - collection component
+     * @param list - collection component
      */
     public static void saveNoFilter(List<String> list) {
         if (list.size() != 0) {
@@ -35,16 +32,14 @@ public class ExportCommand {
                         printWriter.write(ip_port + "\n");
                     }
                     printWriter.close();
-                    AlertBox.show(Alert.AlertType.INFORMATION, "Proxies Exported",
-                            "All proxies have been successfully exported to disk!");
+                    Toast.makeToast("All proxies have been successfully exported to disk!");
                 } catch (IOException e) {
-                    AlertBox.show(Alert.AlertType.ERROR, "Export Failed",
+                    Alerter.showAlert(Alert.AlertType.ERROR, "Export Failed",
                             "Unable to export the data. Error: " + e.getMessage());
                 }
             }
         } else {
-            AlertBox.show(Alert.AlertType.INFORMATION, "No Proxies",
-                    "There's currently no proxies loaded to export!");
+            Toast.makeToast("There's currently no proxies loaded to export!");
         }
     }
 
@@ -53,6 +48,10 @@ public class ExportCommand {
      * @param tableView - collection component
      */
     public static void saveAsTable(TableView<Proxy> tableView) {
+        if (ProxyCheckCommand.isRunning()) {
+            Toast.makeToast("Please wait for the proxy checker to stop.");
+            return;
+        }
         if (tableView.getItems().size() != 0) {
             File file = FileCommand.getFileToSave(true,
                     tableView.getItems().size() + "_" + ProxySettings.getConfig().getProxyType().name() + "_proxies");
@@ -63,16 +62,14 @@ public class ExportCommand {
                         printWriter.write(getCSV(proxy));
                     }
                     printWriter.close();
-                    AlertBox.show(Alert.AlertType.INFORMATION, "Table Exported",
-                            "The table has been successfully exported to disk!");
+                    Toast.makeToast("The table has been successfully exported to disk!");
                 } catch (IOException e) {
-                    AlertBox.show(Alert.AlertType.ERROR, "Export Failed",
+                    Alerter.showAlert(Alert.AlertType.ERROR, "Export Failed",
                             "Unable to export the table. Error: " + e.getMessage());
                 }
             }
         } else {
-            AlertBox.show(Alert.AlertType.INFORMATION, "No Data",
-                    "There's currently no data to export!");
+            Toast.makeToast("There's currently no data to export!");
         }
     }
 
@@ -84,6 +81,10 @@ public class ExportCommand {
      * @param proxyAnonymity - The ProxyAnonymity (null for all proxies belonging to ProxyStatus)
      */
     public static void save(TableView<Proxy> tableView, ProxyStatus proxyStatus, ProxyAnonymity proxyAnonymity) {
+        if (ProxyCheckCommand.isRunning()) {
+            Toast.makeToast("Please wait for the proxy checker to stop.");
+            return;
+        }
         if (tableView.getItems().size() != 0) {
             File file = FileCommand.getFileToSave(false,
                     getFilteredListSize(tableView, proxyStatus, proxyAnonymity)
@@ -100,16 +101,14 @@ public class ExportCommand {
                         }
                     }
                     printWriter.close();
-                    AlertBox.show(Alert.AlertType.INFORMATION, "Data Exported",
-                            "The data has been successfully exported to disk!");
+                    Toast.makeToast("The data has been successfully exported to disk!");
                 } catch (IOException e) {
-                    AlertBox.show(Alert.AlertType.ERROR, "Export Failed",
+                    Alerter.showAlert(Alert.AlertType.ERROR, "Export Failed",
                             "Unable to export the data. Error: " + e.getMessage());
                 }
             }
         } else {
-            AlertBox.show(Alert.AlertType.INFORMATION, "No Data",
-                    "There's currently no data to export!");
+            Toast.makeToast("There's currently no data to export!");
         }
     }
 
@@ -119,14 +118,12 @@ public class ExportCommand {
      * @return String - csv
      */
     private static String getCSV(Proxy proxy) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(proxy.getIp()).append(",");
-        sb.append(proxy.getPort()).append(",");
-        sb.append(proxy.getProxyStatus()).append(",");
-        sb.append(proxy.getProxyAnonymity()).append(",");
-        sb.append(proxy.getCountry()).append(",");
-        sb.append(proxy.getResponseTime()).append("\n");
-        return sb.toString();
+        return proxy.getIp() + "," +
+                proxy.getPort() + "," +
+                proxy.getProxyStatus() + "," +
+                proxy.getProxyAnonymity() + "," +
+                proxy.getCountry() + "," +
+                proxy.getResponseTime() + "\n";
     }
 
     /**
@@ -156,7 +153,7 @@ public class ExportCommand {
         int amount = 0;
         for (Proxy proxy : tableView.getItems()) {
             String line = getLine(proxy, proxyStatus, proxyAnonymity);
-            if (line != null) { // a valid line was given
+            if (line != null) {
                 amount++;
             }
         }

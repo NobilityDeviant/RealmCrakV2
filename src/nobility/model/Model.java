@@ -4,29 +4,36 @@ import com.dustinredmond.fxtrayicon.FXTrayIcon;
 import javafx.animation.Animation;
 import javafx.animation.FadeTransition;
 import javafx.application.Platform;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.MenuItem;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import nobility.*;
-import nobility.moduleshandler.ModuleHandler;
-import nobility.moduleshandler.modules.hits.Hit;
-import nobility.moduleshandler.modules.rotmg.ItemParser;
-import nobility.moduleshandler.settings.Collects;
-import nobility.save.*;
-import org.apache.commons.codec.binary.Base64;
+import nobility.Cycle;
+import nobility.Main;
+import nobility.SystemCycle;
+import nobility.UpdateManager;
+import nobility.handler.ModuleHandler;
+import nobility.handler.modules.hits.Hit;
+import nobility.handler.modules.rotmg.ItemParser;
+import nobility.handler.settings.Collects;
+import nobility.save.Combos;
+import nobility.save.Defaults;
+import nobility.save.Save;
+import nobility.save.SerializableManager;
+import nobility.tools.Alerter;
+import nobility.tools.Toast;
+import nobility.tools.Tools;
 
-import javax.crypto.Cipher;
-import java.security.Key;
 import java.util.Calendar;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class Model {
 
-    public static final String APP_NAME = "RealmCrakV2 By Nobility";
+    public static final String APP_NAME = "RealmCrak";
+    public static final String ACTIVE_PAGE_BACKGROUND_COLOR = "#02030A";
+    public static final String ICON = String.valueOf(Main.class.getResource("/images/icon.png"));
+    public static final String DIALOG_CSS = String.valueOf(Main.class.getResource("/css/dialog.css"));
+
     private Stage mainStage;
     private final ModuleHandler moduleHandler;
     private Save save;
@@ -36,23 +43,10 @@ public class Model {
     private final Collects collects;
     private FXTrayIcon icon;
     public MenuItem exit, show, start, stop, openResults;
-    private boolean loggedIn = false;
     private final FXModel fxModel = new FXModel();
     private final FadeTransition fadeTransition;
     private final ItemParser itemParser;
     private final UpdateManager updateManager;
-    private int days = 0, hours = 0, minutes = 0;
-    private boolean freetrialMode = false;
-    private final Database database;
-    private String savedKey;
-
-    public String getSavedKey() {
-        return savedKey;
-    }
-
-    public void setSavedKey(String savedKey) {
-        this.savedKey = savedKey;
-    }
 
     public Model() {
         save = SerializableManager.loadSettings();
@@ -79,11 +73,6 @@ public class Model {
         updateManager = new UpdateManager(this);
         collects = new Collects(this);
         moduleHandler = new ModuleHandler(this);
-        database = new Database(this);
-    }
-
-    public Database getDatabase() {
-        return database;
     }
 
     public UpdateManager getUpdateManager() {
@@ -93,48 +82,6 @@ public class Model {
     public ItemParser getItemParser() {
         return itemParser;
     }
-
-    public boolean isFreetrialMode() {
-        return freetrialMode;
-    }
-
-    public void setFreetrialMode(boolean freetrialMode) {
-        this.freetrialMode = freetrialMode;
-    }
-
-    public int getDays() {
-        return days;
-    }
-
-    public void setDays(int days) {
-        if (days <= 0) {
-            days = 0;
-        }
-        this.days = days;
-    }
-
-    public void setHours(int hours) {
-        if (hours <= 0) {
-            hours = 0;
-        }
-        this.hours = hours;
-    }
-
-    public int getHours() {
-        return hours;
-    }
-
-    public void setMinutes(int minutes) {
-        if (minutes <= 0) {
-            minutes = 0;
-        }
-        this.minutes = minutes;
-    }
-
-    public int getMinutes() {
-        return minutes;
-    }
-
 
     public void setComboSlider(int posistion, int max) {
         fxModel.getSldComboLine().setDisable(false);
@@ -181,25 +128,22 @@ public class Model {
         fxModel.getChbxProxyType().setValue(save.getBoolean(Defaults.SOCKS) ? "SOCKS" : "HTTP(S)");
     }
 
-    public void setComboProgressText(int progress, int total, double percentage) {
+    public void setComboProgressText(int progress, int total) {
         if (progress > total) {
             progress = total;
         }
-        if (percentage > 100) {
-            percentage = 100;
-        }
-        fxModel.getLblComboProgress().setText(progress + "/" + total + " Completed (" + (int) percentage + "%)");
+        fxModel.getLblComboProgress().setText(progress + "/" + total
+                + " Completed (" + Tools.percentFormat.format(progress / (double) total) + ")");
         fxModel.getSldComboLine().setValue(progress);
     }
 
     public void updateProgress() {
         Platform.runLater(() -> {
-            int progress = moduleHandler.settings().getProgress();//moduleHandler.getSettings().getProgress();//(moduleHandler.getSettingsHandler().getComboSize() - moduleHandler.getSettingsHandler().getCombos().size());
+            int progress = moduleHandler.settings().getProgress();
             int size = moduleHandler.settings().getComboSize();
-            double percentage = Math.round(100.0 / size * progress);
             setInvalid(moduleHandler.settings().getInvalid());
-            setComboProgressText(progress, size, percentage);
-            fxModel.getProgressBarCombo().setProgress(percentage / 100);
+            setComboProgressText(progress, size);
+            fxModel.getProgressBarCombo().setProgress((double) Math.round(100.0 / size * progress) / 100);
         });
     }
 
@@ -281,9 +225,9 @@ public class Model {
 
     public void setupMenuIcon() {
         if (FXTrayIcon.isSupported()) {
-            icon = new FXTrayIcon(mainStage, Main.class.getResource("icon.png"));
+            icon = new FXTrayIcon(mainStage, Main.class.getResource("/images/icon.png"));
             icon.setApplicationTitle(Model.APP_NAME);
-            icon.addMenuItem(show = new MenuItem("Show/Hide RealmCrak"));
+            icon.addMenuItem(show = new MenuItem("Show/Hide " + APP_NAME));
             show.setOnAction(event -> {
                 if (!mainStage.isShowing()) {
                     Platform.setImplicitExit(!save.getBoolean(Defaults.CLOSETOSYSTEMTRAY));
@@ -346,60 +290,16 @@ public class Model {
     }
 
     public void resetSettings() {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION,
-                "This will set all your settings to default. \n" +
-                        "Do you want to continue?", ButtonType.YES, ButtonType.NO);
-        alert.setTitle("Reset Settings");
-        Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
-        stage.getIcons().add(new Image(String.valueOf(Main.class.getResource("icon.png"))));
-        alert.setHeaderText("");
-        alert.showAndWait();
-        if (alert.getResult() == ButtonType.YES) {
+        Alerter.showConfirm("Reset Settings", "This will set all your settings to default. \n" +
+                "Do you want to continue?", () -> {
             SerializableManager.resetSettings();
             save = new Save();
             save.loadDefaultSettings();
             SerializableManager.saveSettings(save);
-            System.out.println("Successfully reset your settings.");
+            Toast.makeToast("Successfully reset your settings.");
             setOptionBoxes();
             setTextFields();
             setExtraOptions();
-        }
-    }
-
-    public void showMessage(String title, String content) {
-        Platform.runLater(() -> {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle(title);
-            Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
-            stage.getIcons().add(new Image(String.valueOf(Main.class.getResource("icon.png"))));
-            alert.setHeaderText("");
-            alert.setContentText(content);
-            alert.showAndWait();
-        });
-    }
-
-    public String decrypt(String v, Key k) {
-        try {
-            Cipher c = Cipher.getInstance(Constants.transform);
-            c.init(Constants.mode, k);
-            byte[] decodedValue = new Base64().decode(v.getBytes(Constants.standard));
-            byte[] decryptedVal = c.doFinal(decodedValue);
-            //String s = new String(decryptedVal, Constants.standard);
-            //System.out.println(s);
-            return new String(decryptedVal, Constants.standard);
-        } catch (Exception ignored) {}
-        return "";
-    }
-
-    public void showError(String content) {
-        Platform.runLater(() -> {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
-            stage.getIcons().add(new Image(String.valueOf(Main.class.getResource("icon.png"))));
-            alert.setHeaderText("");
-            alert.setContentText(content);
-            alert.showAndWait();
         });
     }
 
@@ -466,31 +366,21 @@ public class Model {
         }
     }
 
-
-    public void setLoggedIn(boolean loggedIn) {
-        this.loggedIn = loggedIn;
-    }
-
     public void shutdown() {
         if (moduleHandler.settings().isRunning() || moduleHandler.settings().isStopping()) {
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION,
-                    "RealmCrak is currently running.\n" +
-                            "Exiting will force stop the threads and might mess up results.\n" +
-                            "Do you still want to exit?",
-                    ButtonType.CANCEL, ButtonType.YES);
-            alert.showAndWait().ifPresent(buttonType -> {
-                if (buttonType.equals(ButtonType.YES)) {
-                    if (icon != null) {
-                        icon.hide();
-                    }
-                    moduleHandler.stopForShutdown();
-                    moduleHandler.stop();
-                    saveSettings();
-                    saveCombos();
-                    cycleService.shutdownNow();
-                    systemCycleService.shutdownNow();
-                    System.exit(0);
+            Alerter.showConfirm("Shutdown", APP_NAME + " is currently running.\n" +
+                    "Exiting will force stop the threads and might mess up results.\n" +
+                    "Do you still want to exit?", () -> {
+                if (icon != null) {
+                    icon.hide();
                 }
+                moduleHandler.stopForShutdown();
+                moduleHandler.stop();
+                saveSettings();
+                saveCombos();
+                cycleService.shutdownNow();
+                systemCycleService.shutdownNow();
+                System.exit(0);
             });
         } else {
             if (icon != null) {

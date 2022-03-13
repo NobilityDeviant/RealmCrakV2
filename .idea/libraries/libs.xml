@@ -6,16 +6,15 @@
       <root url="jar://$PROJECT_DIR$/libs/commons-lang3-3.7.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/appdirs-1.2.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/gson-2.8.5.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libs/mysql-connector-java-8.0.17.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/slf4j-api-2.0.0-alpha1.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/commons-codec-1.10.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/guava-29.0-jre.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/commons-net-3.6.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/commons-io-2.6.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libs/FXTrayIcon-3.0.0.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/jna-5.9.0.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/jna-platform-5.9.0.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/oshi-core-5.8.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/FXTrayIcon-3.0.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

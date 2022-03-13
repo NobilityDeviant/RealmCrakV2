@@ -9,9 +9,6 @@ import nobility.proxy.components.entities.Proxy;
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 
-/**
- * Event Handler for ProxyCheckerController
- */
 public class ProxyCheckerKeyEvent implements EventHandler<KeyEvent> {
     @Override
     public void handle(KeyEvent event) {
