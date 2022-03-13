@@ -33,6 +33,7 @@ public class Model {
     public static final String ACTIVE_PAGE_BACKGROUND_COLOR = "#02030A";
     public static final String ICON = String.valueOf(Main.class.getResource("/images/icon.png"));
     public static final String DIALOG_CSS = String.valueOf(Main.class.getResource("/css/dialog.css"));
+    public static final String FX_PATH = "/fx/";
 
     private Stage mainStage;
     private final ModuleHandler moduleHandler;

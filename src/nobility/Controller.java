@@ -292,7 +292,7 @@ public class Controller implements Initializable {
                     break;
                 case "preferences":
                     nobility.proxy.Window.show(item_id.substring(0, 1).toUpperCase() + item_id.substring(1),
-                            new FXMLLoader(Main.class.getResource("../fx/proxy-settings.fxml")));
+                            new FXMLLoader(Main.class.getResource(Model.FX_PATH + "proxy-settings.fxml")));
                     break;
             }
         }
@@ -354,7 +354,7 @@ public class Controller implements Initializable {
     @FXML
     private void editItemList() {
         if (!itemSearchStage.isShowing()) {
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource("../fx/item-search.fxml"));
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource(Model.FX_PATH + "item-search.fxml"));
             Parent layout;
             try {
                 layout = loader.load();

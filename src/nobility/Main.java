@@ -19,7 +19,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         Model model = new Model();
         model.setMainStage(primaryStage);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../fx/home.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(Model.FX_PATH + "home.fxml"));
         loader.setControllerFactory((Class<?> controllerType) -> {
             try {
                 for (Constructor<?> con : controllerType.getConstructors()) {
