@@ -4,8 +4,6 @@ RealmoftheMadGod's worst enemy.
 RealmCrak is an account checker for RealmOfTheMadGod. (ROTMG)
 It is now FREE for anyone to use however they like.
 
-Check out more info about it here: https://nobility.fun
-
 Coded in Java 8. You need java 8 to use it: https://www.java.com/en/download/manual.jsp
 
 JDK 8 is needed to edit it: https://www.openlogic.com/openjdk-downloads?field_java_parent_version_target_id=416&field_operating_system_target_id=All&field_architecture_target_id=All&field_java_package_target_id=All
@@ -16,7 +14,8 @@ You can download it here: https://github.com/NobilityDeviant/RealmCrakV2/release
 
 Or you can compile the jar yourself.
 
-If you are new to these type of programs, you can contact me about any questions.
+Since this program is not what I want to showcase going forward, there will be no documentation.
+If you have any questions you can contact me on my Discord.
 
 My Discord: Nobility#9814
 
