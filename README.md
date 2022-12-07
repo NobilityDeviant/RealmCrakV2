@@ -15,7 +15,5 @@ You can download it here: https://github.com/NobilityDeviant/RealmCrakV2/release
 Or you can compile the jar yourself.
 
 Since this program is not what I want to showcase going forward, there will be no documentation.
-If you have any questions you can contact me on my Discord.
-
-My Discord: Nobility#9814
+If you have any questions you can email me at nobilitydev@protonmail.com
 
